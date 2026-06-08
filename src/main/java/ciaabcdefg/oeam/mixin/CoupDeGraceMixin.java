@@ -50,6 +50,7 @@ public class CoupDeGraceMixin {
         if (coupDeGrace == null) return totalDamage;
 
         var stack = self.getWeaponItem();
+
         int enchantmentLevel = EnchantmentHelper.getItemEnchantmentLevel(coupDeGrace, stack);
         if (enchantmentLevel == 0) return totalDamage;
 
@@ -97,5 +98,18 @@ public class CoupDeGraceMixin {
     )
     private float applySweepingDamage(float baseDamage, @Local(name = "totalDamage") float totalDamage) {
         return totalDamage;
+    }
+
+    @ModifyVariable(
+            method = "stabAttack",
+            at = @At(
+                    value = "INVOKE",
+                    target = "Lnet/minecraft/world/entity/Entity;getDeltaMovement()Lnet/minecraft/world/phys/Vec3;",
+                    shift = At.Shift.AFTER
+            ),
+            name = "totalDamage"
+    )
+    private float applyStabCrit(float totalDamage, @Local(name = "target", argsOnly = true) Entity target) {
+        return applyExtraCritMultiplier(totalDamage, target);
     }
 }
