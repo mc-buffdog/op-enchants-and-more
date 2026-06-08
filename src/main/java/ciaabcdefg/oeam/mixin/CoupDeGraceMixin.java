@@ -1,9 +1,9 @@
 package ciaabcdefg.oeam.mixin;
 
-import ciaabcdefg.oeam.OPEnchantsAndMore;
 import ciaabcdefg.oeam.enchantment.ModEnchantments;
 import ciaabcdefg.oeam.particle.ModParticles;
 import ciaabcdefg.oeam.sound.ModSounds;
+import com.llamalad7.mixinextras.sugar.Local;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.entity.Entity;
@@ -67,5 +67,18 @@ public class CoupDeGraceMixin {
         );
 
         return totalDamage * damageMult;
+    }
+
+    @ModifyVariable(
+            method = "attack",
+            at = @At(
+                    value = "INVOKE",
+                    target = "Lnet/minecraft/world/entity/player/Player;causeExtraKnockback(Lnet/minecraft/world/entity/Entity;FLnet/minecraft/world/phys/Vec3;)V",
+                    shift = At.Shift.AFTER
+            ),
+            name = "baseDamage"
+    )
+    private float applySweepingDamage(float baseDamage, @Local(name = "totalDamage") float totalDamage) {
+        return totalDamage;
     }
 }
