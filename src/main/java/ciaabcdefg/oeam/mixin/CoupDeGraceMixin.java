@@ -56,7 +56,7 @@ public class CoupDeGraceMixin {
 
         if (self.getRandom().nextDouble() >= chance) return totalDamage;
 
-        OPEnchantsAndMore.LOGGER.info("Coup De Grace!!: {} -> {}", totalDamage, totalDamage * damageMult);
+//        OPEnchantsAndMore.LOGGER.info("Coup De Grace!!: {} -> {}", totalDamage, totalDamage * damageMult);
 
         world.playSound(null, entity.blockPosition(), ModSounds.COUP_DE_GRACE, SoundSource.PLAYERS, 1f, 1f);
         ((ServerLevel) world).sendParticles(ModParticles.COUP_DE_GRACE_PARTICLE,
