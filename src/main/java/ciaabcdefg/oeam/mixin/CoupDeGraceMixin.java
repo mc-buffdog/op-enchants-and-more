@@ -19,14 +19,15 @@ public class CoupDeGraceMixin {
             method = "attack",
             at = @At(
                     value = "INVOKE",
-                    target = "Lnet/minecraft/world/entity/Entity;hurtOrSimulate(Lnet/minecraft/world/damagesource/DamageSource;F)Z",
-                    shift = At.Shift.BEFORE
+                    target = "Lnet/minecraft/world/entity/Entity;getDeltaMovement()Lnet/minecraft/world/phys/Vec3;",
+                    shift = At.Shift.AFTER
             ),
             name = "totalDamage")
     private float applyExtraCritMultiplier(float totalDamage, Entity entity) {
-        Player self = (Player) (Object) this;
-
+        Player self = (Player)(Object) this;
+        float damageMultiplier;
         var world = self.level();
+
         if (world.isClientSide()) return totalDamage;
 
         var stack = self.getWeaponItem();
@@ -40,25 +41,29 @@ public class CoupDeGraceMixin {
         int level = EnchantmentHelper.getItemEnchantmentLevel(coupDeGrace, stack);
         if (level == 0) return totalDamage;
 
-        float damageMult;
         float chance;
 
         if (level == 1) {
-            damageMult = 2.0F;
+            damageMultiplier = 2.0F;
             chance = 0.34F;
         } else if (level == 2) {
-            damageMult = 3.25F;
+            damageMultiplier = 3.25F;
             chance = 0.38F;
         } else {
-            damageMult = 4.5F;
+            damageMultiplier = 4.5F;
             chance = 0.41F;
         }
 
-        if (self.getRandom().nextDouble() >= chance) return totalDamage;
+        if (self.getRandom().nextDouble() >= chance) {
+            return totalDamage;
+        };
 
-//        OPEnchantsAndMore.LOGGER.info("Coup De Grace!!: {} -> {}", totalDamage, totalDamage * damageMult);
-
+        // Coup de Grace hit
         world.playSound(null, entity.blockPosition(), ModSounds.COUP_DE_GRACE, SoundSource.PLAYERS, 1f, 1f);
+
+        // Blood splatter
+        world.playSound(null, entity.blockPosition(), ModSounds.SPLATTER, SoundSource.PLAYERS, 0.5f, 1f);
+
         ((ServerLevel) world).sendParticles(ModParticles.COUP_DE_GRACE_PARTICLE,
                 entity.position().x(),
                 entity.position().y(),
@@ -66,7 +71,7 @@ public class CoupDeGraceMixin {
                 3, 0, 0, 0, 1
         );
 
-        return totalDamage * damageMult;
+        return totalDamage * damageMultiplier;
     }
 
     @ModifyVariable(

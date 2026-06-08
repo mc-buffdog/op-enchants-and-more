@@ -4,5 +4,13 @@
     "sounds": [
       "op-enchants-and-more:coup_de_grace"
     ]
+  },
+  "splatter": {
+    "subtitle": "sounds.op-enchants-and-more.splatter",
+    "sounds": [
+      "op-enchants-and-more:splatter1",
+      "op-enchants-and-more:splatter2",
+      "op-enchants-and-more:splatter3"
+    ]
   }
 }
