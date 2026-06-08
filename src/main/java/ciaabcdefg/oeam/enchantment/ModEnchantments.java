@@ -13,6 +13,9 @@ public class ModEnchantments {
     public static final ResourceKey<Enchantment> LIFESTEAL
             = register("lifesteal");
 
+    public static final ResourceKey<Enchantment> BUTTERFLY
+            = register("butterfly");
+
     private static ResourceKey<Enchantment> register(String id) {
         return ResourceKey.create(
                 Registries.ENCHANTMENT,
