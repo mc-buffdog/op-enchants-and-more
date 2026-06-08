@@ -19,5 +19,6 @@ public class ModEnchantmentTagProvider extends FabricTagsProvider<Enchantment> {
     @Override
     protected void addTags(HolderLookup.@NonNull Provider wrapperLookup) {
         builder(EnchantmentTags.NON_TREASURE).add(ModEnchantments.COUP_DE_GRACE);
+        builder(EnchantmentTags.NON_TREASURE).add(ModEnchantments.LIFESTEAL);
     }
 }

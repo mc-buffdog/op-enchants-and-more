@@ -48,6 +48,22 @@ public class ModRegistryDataGenerator extends FabricDynamicRegistryProvider {
                         )
                 )
         );
+
+        register(
+                context,
+                ModEnchantments.LIFESTEAL,
+                Enchantment.enchantment(
+                        Enchantment.definition(
+                                items.getOrThrow(ItemTags.WEAPON_ENCHANTABLE),
+                                10,
+                                5,
+                                Enchantment.dynamicCost(1, 11),
+                                Enchantment.dynamicCost(21, 11),
+                                1,
+                                EquipmentSlotGroup.MAINHAND
+                        )
+                )
+        );
     }
 
     private static void register(BootstrapContext<Enchantment> registry, ResourceKey<Enchantment> key, Enchantment.Builder builder) {
