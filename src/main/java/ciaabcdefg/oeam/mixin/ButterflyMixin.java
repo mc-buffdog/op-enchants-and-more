@@ -1,6 +1,7 @@
 package ciaabcdefg.oeam.mixin;
 
 import ciaabcdefg.oeam.enchantment.ModEnchantments;
+import com.llamalad7.mixinextras.injector.ModifyExpressionValue;
 import net.minecraft.core.Holder;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.damagesource.DamageSource;
@@ -8,6 +9,7 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.item.enchantment.EnchantmentHelper;
 import net.minecraft.world.level.Level;
+import org.objectweb.asm.Opcodes;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
@@ -51,5 +53,17 @@ public class ButterflyMixin {
         }
 
         self.invulnerableTime = 1;
+    }
+
+    @ModifyExpressionValue(
+            method = "swing(Lnet/minecraft/world/InteractionHand;Z)V",
+            at = @At(
+                    value = "FIELD",
+                    target = "Lnet/minecraft/world/entity/LivingEntity;swinging:Z",
+                    opcode = Opcodes.GETFIELD
+            )
+    )
+    private boolean aaaa(boolean original) {
+        return false;
     }
 }
