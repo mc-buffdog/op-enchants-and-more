@@ -1,6 +1,5 @@
 package ciaabcdefg.oeam.mixin;
 
-import ciaabcdefg.oeam.OPEnchantsAndMore;
 import ciaabcdefg.oeam.enchantment.ModEnchantments;
 import ciaabcdefg.oeam.particle.ModParticles;
 import ciaabcdefg.oeam.sound.ModSounds;
