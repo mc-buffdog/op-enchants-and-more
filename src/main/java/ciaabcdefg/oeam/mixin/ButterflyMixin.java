@@ -1,6 +1,5 @@
 package ciaabcdefg.oeam.mixin;
 
-import ciaabcdefg.oeam.OPEnchantsAndMore;
 import ciaabcdefg.oeam.enchantment.ModEnchantments;
 import net.minecraft.core.Holder;
 import net.minecraft.server.level.ServerLevel;
@@ -49,7 +48,7 @@ public class ButterflyMixin {
 
         if (enchantmentLevel == 0) {
             return;
-        };
+        }
 
         self.invulnerableTime = 1;
     }
