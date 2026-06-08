@@ -1,5 +1,6 @@
 package ciaabcdefg.oeam.mixin;
 
+import ciaabcdefg.oeam.OPEnchantsAndMore;
 import ciaabcdefg.oeam.enchantment.ModEnchantments;
 import ciaabcdefg.oeam.particle.ModParticles;
 import ciaabcdefg.oeam.sound.ModSounds;
@@ -50,8 +51,11 @@ public class CoupDeGraceMixin {
         if (coupDeGrace == null) return totalDamage;
 
         var stack = self.getWeaponItem();
+        OPEnchantsAndMore.LOGGER.info("CDG check for {} [1]", stack.getItemName().toString());
+
         int enchantmentLevel = EnchantmentHelper.getItemEnchantmentLevel(coupDeGrace, stack);
         if (enchantmentLevel == 0) return totalDamage;
+        OPEnchantsAndMore.LOGGER.info("CDG check for {} [2]", stack.getItemName().toString());
 
         float chance;
         float damageMultiplier;
@@ -69,6 +73,8 @@ public class CoupDeGraceMixin {
         if (self.getRandom().nextDouble() >= chance) {
             return totalDamage;
         }
+
+        OPEnchantsAndMore.LOGGER.info("CDG check for {} [3]", stack.getItemName().toString());
 
         // Coup de Grace hit sound
         level.playSound(null, entity.blockPosition(), ModSounds.COUP_DE_GRACE, SoundSource.PLAYERS, 1f, 1f);
@@ -97,5 +103,18 @@ public class CoupDeGraceMixin {
     )
     private float applySweepingDamage(float baseDamage, @Local(name = "totalDamage") float totalDamage) {
         return totalDamage;
+    }
+
+    @ModifyVariable(
+            method = "stabAttack",
+            at = @At(
+                    value = "INVOKE",
+                    target = "Lnet/minecraft/world/entity/Entity;getDeltaMovement()Lnet/minecraft/world/phys/Vec3;",
+                    shift = At.Shift.AFTER
+            ),
+            name = "totalDamage"
+    )
+    private float applyStabCrit(float totalDamage, @Local(name = "target", argsOnly = true) Entity target) {
+        return applyExtraCritMultiplier(totalDamage, target);
     }
 }
