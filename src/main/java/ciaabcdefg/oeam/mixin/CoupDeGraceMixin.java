@@ -51,11 +51,9 @@ public class CoupDeGraceMixin {
         if (coupDeGrace == null) return totalDamage;
 
         var stack = self.getWeaponItem();
-        OPEnchantsAndMore.LOGGER.info("CDG check for {} [1]", stack.getItemName().toString());
 
         int enchantmentLevel = EnchantmentHelper.getItemEnchantmentLevel(coupDeGrace, stack);
         if (enchantmentLevel == 0) return totalDamage;
-        OPEnchantsAndMore.LOGGER.info("CDG check for {} [2]", stack.getItemName().toString());
 
         float chance;
         float damageMultiplier;
@@ -73,8 +71,6 @@ public class CoupDeGraceMixin {
         if (self.getRandom().nextDouble() >= chance) {
             return totalDamage;
         }
-
-        OPEnchantsAndMore.LOGGER.info("CDG check for {} [3]", stack.getItemName().toString());
 
         // Coup de Grace hit sound
         level.playSound(null, entity.blockPosition(), ModSounds.COUP_DE_GRACE, SoundSource.PLAYERS, 1f, 1f);
