@@ -68,7 +68,7 @@ public class CoupDeGraceMixin {
 
         if (self.getRandom().nextDouble() >= chance) {
             return totalDamage;
-        };
+        }
 
         // Coup de Grace hit sound
         level.playSound(null, entity.blockPosition(), ModSounds.COUP_DE_GRACE, SoundSource.PLAYERS, 1f, 1f);
