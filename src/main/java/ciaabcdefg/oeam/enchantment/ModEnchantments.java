@@ -2,7 +2,7 @@ package ciaabcdefg.oeam.enchantment;
 
 import ciaabcdefg.oeam.OPEnchantsAndMore;
 import ciaabcdefg.oeam.enchantment.effect.ModEnchantmentEffects;
-import ciaabcdefg.oeam.enchantment.tags.ModEnchantmentTags;
+import ciaabcdefg.oeam.enchantment.tag.ModEnchantmentTags;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;

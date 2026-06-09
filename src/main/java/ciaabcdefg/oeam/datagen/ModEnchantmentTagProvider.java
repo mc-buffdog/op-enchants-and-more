@@ -1,7 +1,7 @@
 package ciaabcdefg.oeam.datagen;
 
 import ciaabcdefg.oeam.enchantment.ModEnchantments;
-import ciaabcdefg.oeam.enchantment.tags.ModEnchantmentTags;
+import ciaabcdefg.oeam.enchantment.tag.ModEnchantmentTags;
 import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagsProvider;
 import net.minecraft.core.HolderLookup;
@@ -26,6 +26,7 @@ public class ModEnchantmentTagProvider extends FabricTagsProvider<Enchantment> {
                 .add(ModEnchantments.BUTTERFLY)
                 .add(ModEnchantments.GREATER_SHARPNESS)
                 .add(ModEnchantments.GREATER_EFFICIENCY);
+
         builder(ModEnchantmentTags.EFFICIENCY_EXCLUSIVE)
                 .add(ModEnchantments.GREATER_EFFICIENCY)
                 .add(Enchantments.EFFICIENCY);
