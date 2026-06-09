@@ -1,8 +1,8 @@
 package ciaabcdefg.oeam.enchantment.custom;
 
+import ciaabcdefg.oeam.item.tag.ModItemTags;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstrapContext;
-import net.minecraft.tags.ItemTags;
 import net.minecraft.world.entity.EquipmentSlotGroup;
 import net.minecraft.world.item.enchantment.Enchantment;
 
@@ -11,7 +11,7 @@ public class CleaveEnchantment {
         var items = context.lookup(Registries.ITEM);
         return Enchantment.enchantment(
                 Enchantment.definition(
-                        items.getOrThrow(ItemTags.WEAPON_ENCHANTABLE),
+                        items.getOrThrow(ModItemTags.CLEAVE_WEAPON_ENCHANTABLE),
                         10,
                         4,
                         Enchantment.dynamicCost(1, 11),
