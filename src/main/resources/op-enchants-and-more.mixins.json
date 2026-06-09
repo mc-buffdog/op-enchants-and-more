@@ -5,9 +5,11 @@
   "mixins": [
     "AnvilMenuMixin",
     "ButterflyMixin",
+    "CleaveMixin",
     "CoupDeGraceMixin",
     "LifestealMixin",
-    "LivingEntityInvoker"
+    "LivingEntityInvoker",
+    "PlayerInvoker"
   ],
   "injectors": {
     "defaultRequire": 1

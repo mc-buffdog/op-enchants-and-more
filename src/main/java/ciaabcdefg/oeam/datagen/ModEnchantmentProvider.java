@@ -65,6 +65,13 @@ public class ModEnchantmentProvider extends FabricDynamicRegistryProvider {
                 ButterflyEnchantment.build(context)
         );
 
+        // Cleave
+        register(
+                context,
+                ModEnchantments.CLEAVE,
+                CleaveEnchantment.build(context)
+        );
+
         // Greater Sharpness
         register(
                 context,

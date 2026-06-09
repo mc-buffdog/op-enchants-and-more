@@ -17,6 +17,8 @@ public class ModEnchantments {
             = register("lifesteal");
     public static final ResourceKey<Enchantment> BUTTERFLY
             = register("butterfly");
+    public static final ResourceKey<Enchantment> CLEAVE
+            = register("cleave");
 
     // Greater versions of vanilla enchantments
     public static final ResourceKey<Enchantment> GREATER_SHARPNESS
