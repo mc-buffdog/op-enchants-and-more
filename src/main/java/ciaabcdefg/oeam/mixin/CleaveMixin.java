@@ -7,6 +7,7 @@ import com.llamalad7.mixinextras.sugar.Local;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.tags.ItemTags;
 import net.minecraft.util.Mth;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.Entity;
@@ -89,6 +90,11 @@ public class CleaveMixin {
             bonusSweepRatio = 0.1F;
             bbSize = 10F;
             range = 10F;
+        }
+
+        var stack = self.getWeaponItem();
+        if (stack.is(ItemTags.AXES)) {
+            bonusSweepRatio *= 7.0F;
         }
 
         float rangeSqr = range * range;
