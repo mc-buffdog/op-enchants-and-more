@@ -3,6 +3,7 @@
   "package": "ciaabcdefg.oeam.mixin",
   "compatibilityLevel": "JAVA_25",
   "mixins": [
+    "AnvilMenuMixin",
     "ButterflyMixin",
     "CoupDeGraceMixin",
     "LifestealMixin",
