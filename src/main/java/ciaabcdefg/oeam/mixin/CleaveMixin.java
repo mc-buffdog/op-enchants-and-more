@@ -40,7 +40,7 @@ public class CleaveMixin {
         if (cleaveLevel == 0) {
             this.cleaveLevel = 0;
             return original;
-        };
+        }
         this.cleaveLevel = cleaveLevel;
         return false;
     }
@@ -69,9 +69,9 @@ public class CleaveMixin {
 
         if (!(self.level() instanceof ServerLevel level)) return;
 
-        float bonusSweepRatio = 0.0F;
-        float bbSize = 0.0F;
-        float range = 0.0F;
+        float bonusSweepRatio;
+        float bbSize;
+        float range;
 
         if (cleaveLevel == 1) {
             bonusSweepRatio = 0.010F;
@@ -128,7 +128,7 @@ public class CleaveMixin {
             var holder = x.getKey();
             if (holder.is(enchantment)) {
                 return item.getEnchantments().getLevel(holder);
-            };
+            }
         }
         return 0;
     }
