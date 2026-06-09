@@ -20,6 +20,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.item.enchantment.EnchantmentHelper;
 import net.minecraft.world.phys.AABB;
+import net.minecraft.world.phys.Vec3;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
@@ -74,14 +75,45 @@ public class CleaveMixin {
 
         if (!(self.level() instanceof ServerLevel level)) return;
 
-        float cleaveDamage = 1.0F + ((float)self.getAttributeValue(Attributes.SWEEPING_DAMAGE_RATIO) + 0.05F) * totalDamage;
-        OPEnchantsAndMore.LOGGER.info("Cleave damage: {}", cleaveDamage);
+        float bonusSweepRatio = 0.0F;
+        float bbSize = 0.0F;
+        float range = 0.0F;
 
-        var aabb = target.getBoundingBox().inflate(5.0, 1, 5.0);
+        if (cleaveLevel == 1) {
+            bonusSweepRatio = 0.010F;
+            bbSize = 3F;
+            range = 3F;
+        } else if (cleaveLevel == 2) {
+            bonusSweepRatio = 0.035F;
+            bbSize = 5F;
+            range = 4F;
+        } else if (cleaveLevel == 3) {
+            bonusSweepRatio = 0.075F;
+            bbSize = 7F;
+            range = 7F;
+        } else {
+            bonusSweepRatio = 0.1F;
+            bbSize = 10F;
+            range = 10F;
+        }
+
+        float rangeSqr = range * range;
+        float cleaveDamage = 1.0F + ((float)self.getAttributeValue(Attributes.SWEEPING_DAMAGE_RATIO) + bonusSweepRatio) * totalDamage;
+
+        var aabb = target.getBoundingBox().inflate(
+                bbSize,
+                bbSize * 0.2,
+                bbSize
+        );
+
         var nearbyEntities = level.getEntitiesOfClass(LivingEntity.class, aabb);
+        var selfPos = self.position();
+        var dir = target.position().subtract(selfPos);
 
         for (LivingEntity nearby : nearbyEntities) {
-            if (nearby == target || self.isAlliedTo(nearby) || self.distanceToSqr(nearby) > 100.0F) continue;
+            if (nearby == target || self.isAlliedTo(nearby) || self.distanceToSqr(nearby) > rangeSqr) continue;
+            if (dir.dot(nearby.position().subtract(selfPos)) < 0.0F) continue;
+
             float enchantedDamage = invoker.invokeGetEnchantedDamage(nearby, cleaveDamage, damageSource);
             if (nearby.hurtServer(level, damageSource, enchantedDamage)) {
                 nearby.knockback(0.4F, Mth.sin(self.getYRot() * (float) (Math.PI / 180.0)), -Mth.cos(self.getYRot() * (float) (Math.PI / 180.0)));
