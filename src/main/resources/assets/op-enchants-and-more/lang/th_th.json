@@ -1,10 +1,23 @@
 {
   "enchantment.op-enchants-and-more.coup_de_grace": "การุณยฆาต",
+  "enchantment.op-enchants-and-more.coup_de_grace.desc": "เวลาโจมตีจะมีโอกาสติดคริตามความเสียหายที่ทำ",
+
   "enchantment.op-enchants-and-more.lifesteal": "ดูดเลือด",
+  "enchantment.op-enchants-and-more.lifesteal.desc": "ฟื้นฟูเลือดตามความเสียหายที่ทำ",
+
   "enchantment.op-enchants-and-more.butterfly": "ดุจผีเสื้อ",
+  "enchantment.op-enchants-and-more.butterfly.desc": "เพิ่มความเร็วการโจมตี",
+
   "enchantment.op-enchants-and-more.cleave": "ผ่าซาก",
+  "enchantment.op-enchants-and-more.cleave.desc": "ทำความเสียหายเป็นวงกว้าง",
+
+  "enchantment.op-enchants-and-more.greater_sharpness": "โคตรกวัดแกว่งดาบ",
+  "enchantment.op-enchants-and-more.greater_sharpness.desc": "เพิ่มความเสียหายอย่างมหาศาล",
+
+  "enchantment.op-enchants-and-more.greater_efficiency": "โคตรประสิทธิภาพ",
+  "enchantment.op-enchants-and-more.greater_efficiency.desc": "เพิ่มความเร็วในการขุด",
 
   "sounds.op-enchants-and-more.coup_de_grace": "ตีติดการุณยฆาต",
-  "sounds.op-enchants-and-more.splatter": "เลือดสาด",
+  "sounds.op-enchants-and-more.splatter": "เสียงเลือดหยด",
   "sounds.op-enchants-and-more.cleave": "ผ่าซาก"
 }
