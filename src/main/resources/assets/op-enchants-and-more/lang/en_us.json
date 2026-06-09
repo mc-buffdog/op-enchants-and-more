@@ -1,10 +1,21 @@
 {
   "enchantment.op-enchants-and-more.coup_de_grace": "Coup de Grâce",
+  "enchantment.op-enchants-and-more.coup_de_grace.desc": "Random chance to deal critical damage.",
+
   "enchantment.op-enchants-and-more.lifesteal": "Lifesteal",
+  "enchantment.op-enchants-and-more.lifesteal.desc": "Restores health based on damage inflicted on target.",
+
   "enchantment.op-enchants-and-more.butterfly": "Butterfly",
+  "enchantment.op-enchants-and-more.butterfly.desc": "Increases attack speed.",
+
   "enchantment.op-enchants-and-more.cleave": "Cleave",
+  "enchantment.op-enchants-and-more.cleave.desc": "Damages nearby mobs that are in front of you.",
+
   "enchantment.op-enchants-and-more.greater_sharpness": "Greater Sharpness",
+  "enchantment.op-enchants-and-more.greater_sharpness.desc": "Superior version of Sharpness.",
+
   "enchantment.op-enchants-and-more.greater_efficiency": "Greater Efficiency",
+  "enchantment.op-enchants-and-more.greater_efficiency.desc": "Superior version of Efficiency.",
 
   "sounds.op-enchants-and-more.coup_de_grace": "Coup De Grâce hit",
   "sounds.op-enchants-and-more.cleave": "Cleave",
