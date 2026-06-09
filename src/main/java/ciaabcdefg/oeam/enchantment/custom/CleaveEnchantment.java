@@ -13,7 +13,7 @@ public class CleaveEnchantment {
                 Enchantment.definition(
                         items.getOrThrow(ItemTags.WEAPON_ENCHANTABLE),
                         10,
-                        5,
+                        4,
                         Enchantment.dynamicCost(1, 11),
                         Enchantment.dynamicCost(21, 11),
                         1,
