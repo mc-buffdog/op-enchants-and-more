@@ -12,5 +12,11 @@
       "op-enchants-and-more:splatter2",
       "op-enchants-and-more:splatter3"
     ]
+  },
+  "cleave": {
+    "subtitle": "sounds.op-enchants-and-more.cleave",
+    "sounds": [
+      "op-enchants-and-more:cleave"
+    ]
   }
 }

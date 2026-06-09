@@ -1,0 +1,23 @@
+{
+  "enchantment.op-enchants-and-more.coup_de_grace": "止め刺し",
+  "enchantment.op-enchants-and-more.coup_de_grace.desc": "確率によって大ダメージを与えます。",
+
+  "enchantment.op-enchants-and-more.lifesteal": "血奪い",
+  "enchantment.op-enchants-and-more.lifesteal.desc": "与えたダメージの一部体力を回復します。",
+
+  "enchantment.op-enchants-and-more.butterfly": "蝶の舞",
+  "enchantment.op-enchants-and-more.butterfly.desc": "攻撃速度を増加させます。",
+
+  "enchantment.op-enchants-and-more.cleave": "なぎ払い",
+  "enchantment.op-enchants-and-more.cleave.desc": "なぎ払い攻撃の範囲を増加させます。",
+
+  "enchantment.op-enchants-and-more.greater_sharpness": "ダメージ増加・改",
+  "enchantment.op-enchants-and-more.greater_sharpness.desc": "「ダメージ増加」の強化版。",
+
+  "enchantment.op-enchants-and-more.greater_efficiency": "効率強化・改",
+  "enchantment.op-enchants-and-more.greater_efficiency.desc": "「効率強化」の強化版。",
+
+  "sounds.op-enchants-and-more.coup_de_grace": "「止め刺し」の攻撃",
+  "sounds.op-enchants-and-more.cleave": "「なぎ払い」の攻撃",
+  "sounds.op-enchants-and-more.splatter": "返り血の音"
+}

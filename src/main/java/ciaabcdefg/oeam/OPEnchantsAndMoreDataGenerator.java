@@ -2,8 +2,10 @@ package ciaabcdefg.oeam;
 
 import ciaabcdefg.oeam.datagen.ModEnchantmentProvider;
 import ciaabcdefg.oeam.datagen.ModEnchantmentTagProvider;
+import ciaabcdefg.oeam.datagen.ModItemTagProvider;
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
+import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagsProvider;
 import net.minecraft.core.RegistrySetBuilder;
 import net.minecraft.core.registries.Registries;
 
@@ -13,6 +15,7 @@ public class OPEnchantsAndMoreDataGenerator implements DataGeneratorEntrypoint {
 		FabricDataGenerator.Pack pack = fabricDataGenerator.createPack();
 		pack.addProvider(ModEnchantmentProvider::new);
 		pack.addProvider(ModEnchantmentTagProvider::new);
+		pack.addProvider(ModItemTagProvider::new);
 	}
 
 	@Override

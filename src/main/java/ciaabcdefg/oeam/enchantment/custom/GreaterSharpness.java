@@ -1,20 +1,14 @@
 package ciaabcdefg.oeam.enchantment.custom;
 
-import ciaabcdefg.oeam.OPEnchantsAndMore;
-import ciaabcdefg.oeam.enchantment.tags.ModEnchantmentTags;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstrapContext;
-import net.minecraft.resources.Identifier;
 import net.minecraft.tags.EnchantmentTags;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.entity.EquipmentSlotGroup;
-import net.minecraft.world.entity.ai.attributes.AttributeModifier;
-import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.item.enchantment.EnchantmentEffectComponents;
 import net.minecraft.world.item.enchantment.LevelBasedValue;
 import net.minecraft.world.item.enchantment.effects.AddValue;
-import net.minecraft.world.item.enchantment.effects.EnchantmentAttributeEffect;
 
 public class GreaterSharpness {
     public static Enchantment.Builder build(BootstrapContext<Enchantment> context) {
