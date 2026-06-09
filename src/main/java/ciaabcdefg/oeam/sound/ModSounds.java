@@ -16,6 +16,6 @@ public class ModSounds {
     }
 
     public static void initialize() {
-        OPEnchantsAndMore.LOGGER.info("Registering sounds");
+        OPEnchantsAndMore.LOGGER.info("Initialized ModSounds");
     }
 }

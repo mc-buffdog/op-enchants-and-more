@@ -16,6 +16,6 @@ public class ModParticles {
     }
 
     public static void initialize() {
-        OPEnchantsAndMore.LOGGER.info("Registering particles");
+        OPEnchantsAndMore.LOGGER.info("Initialized ModParticles");
     }
 }

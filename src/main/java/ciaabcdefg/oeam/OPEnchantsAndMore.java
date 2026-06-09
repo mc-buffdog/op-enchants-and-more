@@ -17,8 +17,8 @@ public class OPEnchantsAndMore implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-		ModEnchantmentEffects.initialize();
 		ModSounds.initialize();
 		ModParticles.initialize();
+		ModEnchantments.initialize();
 	}
 }

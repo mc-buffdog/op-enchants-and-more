@@ -1,5 +1,6 @@
 package ciaabcdefg.oeam.mixin;
 
+import ciaabcdefg.oeam.OPEnchantsAndMore;
 import ciaabcdefg.oeam.enchantment.ModEnchantments;
 import ciaabcdefg.oeam.particle.ModParticles;
 import ciaabcdefg.oeam.sound.ModSounds;
@@ -8,16 +9,18 @@ import net.minecraft.core.Holder.Reference;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.item.enchantment.EnchantmentHelper;
 import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.ModifyVariable;
 
 @Mixin(Player.class)
-public class CoupDeGraceMixin {
+public abstract class CoupDeGraceMixin {
     @Unique
     private static Reference<Enchantment> cachedCoupDeGrace = null;
 
@@ -40,17 +43,22 @@ public class CoupDeGraceMixin {
                     shift = At.Shift.AFTER
             ),
             name = "totalDamage")
-    private float applyExtraCritMultiplier(float totalDamage, Entity entity) {
-        Player self = (Player)(Object) this;
+    private float applyExtraCritMultiplier(float totalDamage, Entity entity, @Local(name = "fullStrengthAttack") boolean fullStrengthAttack) {
+        if (!fullStrengthAttack) return totalDamage;
+        var self = (Player)(Object) this;
+
+        // Should not proc on non-living entities
+        if (!(entity instanceof LivingEntity target)) return totalDamage;
+        // Should not proc on dead entities
+        if (target.isDeadOrDying()) return totalDamage;
 
         var level = self.level();
-        if (level.isClientSide()) return totalDamage;
+        if (level.isClientSide() || !(level instanceof ServerLevel serverLevel)) return totalDamage;
 
-        var coupDeGrace = getCoupDeGrace((ServerLevel) level);
+        var coupDeGrace = getCoupDeGrace(serverLevel);
         if (coupDeGrace == null) return totalDamage;
 
         var stack = self.getWeaponItem();
-
         int enchantmentLevel = EnchantmentHelper.getItemEnchantmentLevel(coupDeGrace, stack);
         if (enchantmentLevel == 0) return totalDamage;
 
@@ -71,13 +79,14 @@ public class CoupDeGraceMixin {
             return totalDamage;
         }
 
-        // Coup de Grace hit sound
-        level.playSound(null, entity.blockPosition(), ModSounds.COUP_DE_GRACE, SoundSource.PLAYERS, 1f, 1f);
+        // Coup de Grâce hit sound
+        serverLevel.playSound(null, entity.blockPosition(), ModSounds.COUP_DE_GRACE, SoundSource.PLAYERS, 1f, 1f);
 
         // Blood splatter sound
-        level.playSound(null, entity.blockPosition(), ModSounds.SPLATTER, SoundSource.PLAYERS, 0.5f, 1f);
+        serverLevel.playSound(null, entity.blockPosition(), ModSounds.SPLATTER, SoundSource.PLAYERS, 0.5f, 1f);
 
-        ((ServerLevel) level).sendParticles(ModParticles.COUP_DE_GRACE_PARTICLE,
+        // Blood particles
+        serverLevel.sendParticles(ModParticles.COUP_DE_GRACE_PARTICLE,
                 entity.position().x(),
                 entity.position().y(),
                 entity.position().z(),
@@ -110,6 +119,6 @@ public class CoupDeGraceMixin {
             name = "totalDamage"
     )
     private float applyStabCrit(float totalDamage, @Local(name = "target", argsOnly = true) Entity target) {
-        return applyExtraCritMultiplier(totalDamage, target);
+        return applyExtraCritMultiplier(totalDamage, target, true);
     }
 }
