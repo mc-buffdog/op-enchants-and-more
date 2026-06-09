@@ -16,7 +16,7 @@
 | Lifesteal | Heal on damage done[^1] | Melee |
 | Greater Sharpness | Better version of _Sharpness_ | Melee |
 
-[^1]: Lifesteal amount is based on target HP difference before and after attack. For example, killing a 10/20 HP mob by dealing 23 total damage with 10% lifesteal will only heal 1 HP.
+[^1]: Lifesteal amount is based on target HP difference before and after attack. For example, killing a 10/20 HP mob by dealing 23 total damage with 10% lifesteal will only heal `(10 - 0) * 0.1 = 1` HP.
 
 ### Mining
 | Enchantment | Description | On |
