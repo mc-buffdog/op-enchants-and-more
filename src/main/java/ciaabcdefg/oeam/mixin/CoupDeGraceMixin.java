@@ -8,16 +8,17 @@ import com.llamalad7.mixinextras.sugar.Local;
 import net.minecraft.core.Holder.Reference;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundSource;
+import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.item.enchantment.EnchantmentHelper;
 import org.spongepowered.asm.mixin.Mixin;
-import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.ModifyVariable;
+import org.spongepowered.asm.mixin.injection.Redirect;
 
 @Mixin(Player.class)
 public abstract class CoupDeGraceMixin {
@@ -96,17 +97,16 @@ public abstract class CoupDeGraceMixin {
         return totalDamage * damageMultiplier;
     }
 
-    @ModifyVariable(
+    @Redirect(
             method = "attack",
             at = @At(
                     value = "INVOKE",
-                    target = "Lnet/minecraft/world/entity/player/Player;causeExtraKnockback(Lnet/minecraft/world/entity/Entity;FLnet/minecraft/world/phys/Vec3;)V",
-                    shift = At.Shift.AFTER
-            ),
-            name = "baseDamage"
+                    target = "Lnet/minecraft/world/entity/player/Player;doSweepAttack(Lnet/minecraft/world/entity/Entity;FLnet/minecraft/world/damagesource/DamageSource;F)V"
+            )
     )
-    private float applySweepingDamage(float baseDamage, @Local(name = "totalDamage") float totalDamage) {
-        return totalDamage;
+    private void applySweepingDamage(Player instance, Entity entity, float baseDamage, DamageSource damageSource, float attackStrengthScale, @Local(name = "totalDamage") float totalDamage) {
+        var playerInvoker = (PlayerInvoker)instance;
+        playerInvoker.invokeDoSweepAttack(entity, totalDamage, damageSource, attackStrengthScale);
     }
 
     @ModifyVariable(
