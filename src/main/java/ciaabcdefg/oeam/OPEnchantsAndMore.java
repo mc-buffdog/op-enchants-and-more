@@ -16,9 +16,5 @@ public class OPEnchantsAndMore implements ModInitializer {
 	public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
 
 	@Override
-	public void onInitialize() {
-		ModEnchantmentEffects.initialize();
-		ModSounds.initialize();
-		ModParticles.initialize();
-	}
+	public void onInitialize() {}
 }
