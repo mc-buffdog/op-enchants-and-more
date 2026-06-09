@@ -14,7 +14,6 @@ import org.jspecify.annotations.NonNull;
 import java.util.concurrent.CompletableFuture;
 
 public class ModEnchantmentTagProvider extends FabricTagsProvider<Enchantment> {
-
     public ModEnchantmentTagProvider(FabricPackOutput output, CompletableFuture<HolderLookup.Provider> registriesFuture) {
         super(output, Registries.ENCHANTMENT, registriesFuture);
     }
@@ -27,5 +26,8 @@ public class ModEnchantmentTagProvider extends FabricTagsProvider<Enchantment> {
                 .add(ModEnchantments.BUTTERFLY)
                 .add(ModEnchantments.GREATER_SHARPNESS)
                 .add(ModEnchantments.GREATER_EFFICIENCY);
+        builder(ModEnchantmentTags.EFFICIENCY_EXCLUSIVE)
+                .add(ModEnchantments.GREATER_EFFICIENCY)
+                .add(Enchantments.EFFICIENCY);
     }
 }
