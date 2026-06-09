@@ -1,6 +1,8 @@
 package ciaabcdefg.oeam.enchantment;
 
 import ciaabcdefg.oeam.OPEnchantsAndMore;
+import ciaabcdefg.oeam.enchantment.effect.ModEnchantmentEffects;
+import ciaabcdefg.oeam.enchantment.tags.ModEnchantmentTags;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
@@ -28,5 +30,11 @@ public class ModEnchantments {
                 Registries.ENCHANTMENT,
                 Identifier.fromNamespaceAndPath(OPEnchantsAndMore.MOD_ID, id)
         );
+    }
+
+    public static void initialize() {
+        ModEnchantmentEffects.initialize();
+        ModEnchantmentTags.initialize();
+        OPEnchantsAndMore.LOGGER.info("Initialized ModEnchantments");
     }
 }

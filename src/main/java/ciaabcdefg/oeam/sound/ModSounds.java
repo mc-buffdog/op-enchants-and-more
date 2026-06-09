@@ -14,4 +14,8 @@ public class ModSounds {
         Identifier id = Identifier.fromNamespaceAndPath(OPEnchantsAndMore.MOD_ID, name);
         return Registry.register(BuiltInRegistries.SOUND_EVENT, id, SoundEvent.createVariableRangeEvent(id));
     }
+
+    public static void initialize() {
+        OPEnchantsAndMore.LOGGER.info("Initialized ModSounds");
+    }
 }

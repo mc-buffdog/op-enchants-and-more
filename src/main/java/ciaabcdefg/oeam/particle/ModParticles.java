@@ -14,4 +14,8 @@ public class ModParticles {
     private static SimpleParticleType register(String name, SimpleParticleType particleType) {
         return Registry.register(BuiltInRegistries.PARTICLE_TYPE, Identifier.fromNamespaceAndPath(OPEnchantsAndMore.MOD_ID, name), particleType);
     }
+
+    public static void initialize() {
+        OPEnchantsAndMore.LOGGER.info("Initialized ModParticles");
+    }
 }

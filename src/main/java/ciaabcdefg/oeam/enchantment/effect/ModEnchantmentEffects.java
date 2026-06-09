@@ -15,4 +15,8 @@ public class ModEnchantmentEffects {
                 codec
         );
     }
+
+    public static void initialize() {
+        OPEnchantsAndMore.LOGGER.info("Initialized ModEnchantmentEffects");
+    }
 }
