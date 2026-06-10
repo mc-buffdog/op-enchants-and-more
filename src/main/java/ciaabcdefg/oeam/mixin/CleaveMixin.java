@@ -2,6 +2,7 @@ package ciaabcdefg.oeam.mixin;
 
 import ciaabcdefg.oeam.attribute.ModAttributes;
 import ciaabcdefg.oeam.enchantment.ModEnchantments;
+import ciaabcdefg.oeam.mixin.entity.PlayerInvoker;
 import ciaabcdefg.oeam.sound.ModSounds;
 import com.llamalad7.mixinextras.injector.ModifyExpressionValue;
 import com.llamalad7.mixinextras.sugar.Local;

@@ -1,4 +1,4 @@
-package ciaabcdefg.oeam.mixin;
+package ciaabcdefg.oeam.mixin.entity;
 
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.world.damagesource.DamageSource;
