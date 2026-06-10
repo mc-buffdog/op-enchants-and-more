@@ -1,17 +1,11 @@
 package ciaabcdefg.oeam.enchantment.custom;
 
-import ciaabcdefg.oeam.OPEnchantsAndMore;
-import ciaabcdefg.oeam.attribute.ModAttributes;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstrapContext;
-import net.minecraft.resources.Identifier;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.entity.EquipmentSlotGroup;
-import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.item.enchantment.Enchantment;
-import net.minecraft.world.item.enchantment.EnchantmentEffectComponents;
 import net.minecraft.world.item.enchantment.LevelBasedValue;
-import net.minecraft.world.item.enchantment.effects.EnchantmentAttributeEffect;
 
 public final class GiantSlayerEnchantment {
     public static LevelBasedValue DAMAGE_PERCENT_MAX_HP = LevelBasedValue.perLevel(0.0125F);

@@ -1,6 +1,5 @@
 package ciaabcdefg.oeam.mixin.entity;
 
-import ciaabcdefg.oeam.OPEnchantsAndMore;
 import ciaabcdefg.oeam.attribute.ModAttributes;
 import ciaabcdefg.oeam.enchantment.ModEnchantments;
 import ciaabcdefg.oeam.enchantment.custom.GiantSlayerEnchantment;
@@ -14,7 +13,6 @@ import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.item.enchantment.LevelBasedValue;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
