@@ -77,6 +77,13 @@ public class ModEnchantmentProvider extends FabricDynamicRegistryProvider {
                 ModEnchantments.SOAR,
                 SoarEnchantment.build(context)
         );
+
+        // Giant Slayer
+        register(
+                context,
+                ModEnchantments.GIANT_SLAYER,
+                GiantSlayerEnchantment.build(context)
+        );
     }
 
     private static void register(BootstrapContext<Enchantment> registry, ResourceKey<Enchantment> key, Enchantment.Builder builder) {
