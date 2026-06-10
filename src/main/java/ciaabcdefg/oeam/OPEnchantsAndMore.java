@@ -1,5 +1,6 @@
 package ciaabcdefg.oeam;
 
+import ciaabcdefg.oeam.attribute.ModAttributes;
 import ciaabcdefg.oeam.enchantment.ModEnchantments;
 import ciaabcdefg.oeam.particle.ModParticles;
 import ciaabcdefg.oeam.sound.ModSounds;
@@ -16,5 +17,6 @@ public class OPEnchantsAndMore implements ModInitializer {
 		ModSounds.initialize();
 		ModParticles.initialize();
 		ModEnchantments.initialize();
+		ModAttributes.initialize();
 	}
 }
