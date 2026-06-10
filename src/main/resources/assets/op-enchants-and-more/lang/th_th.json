@@ -15,7 +15,12 @@
   "enchantment.op-enchants-and-more.greater_sharpness.desc": "เพิ่มความเสียหายอย่างมหาศาล",
 
   "enchantment.op-enchants-and-more.greater_efficiency": "โคตรประสิทธิภาพ",
-  "enchantment.op-enchants-and-more.greater_efficiency.desc": "เพิ่มความเร็วในการขุด",
+  "enchantment.op-enchants-and-more.greater_efficiency.desc": "เพิ่มความเร็วในการขุดอย่างมหาศาล",
+
+  "enchantment.op-enchants-and-more.soar": "ล่องนภา",
+  "enchantment.op-enchants-and-more.soar.desc": "เพิ่มความเร็วการร่อนและความเร่งจากพลุ",
+
+  "attribute.name.op-enchants-and-more.elytra_speed_bonus": "โบนัสความเร็วปีก",
 
   "sounds.op-enchants-and-more.coup_de_grace": "ตีติดการุณยฆาต",
   "sounds.op-enchants-and-more.splatter": "เสียงเลือดหยด",

@@ -17,6 +17,11 @@
   "enchantment.op-enchants-and-more.greater_efficiency": "Greater Efficiency",
   "enchantment.op-enchants-and-more.greater_efficiency.desc": "Superior version of Efficiency.",
 
+  "enchantment.op-enchants-and-more.soar": "Soar",
+  "enchantment.op-enchants-and-more.soar.desc": "Increases elytra glide and rocket boost speeds.",
+
+  "attribute.name.op-enchants-and-more.elytra_speed_bonus": "Elytra Speed Bonus",
+
   "sounds.op-enchants-and-more.coup_de_grace": "Coup De Grâce hit",
   "sounds.op-enchants-and-more.cleave": "Cleave",
   "sounds.op-enchants-and-more.splatter": "Blood splatter"

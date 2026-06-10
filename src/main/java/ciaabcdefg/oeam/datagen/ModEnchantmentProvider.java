@@ -61,14 +61,21 @@ public class ModEnchantmentProvider extends FabricDynamicRegistryProvider {
         register(
                 context,
                 ModEnchantments.GREATER_SHARPNESS,
-                GreaterSharpness.build(context)
+                GreaterSharpnessEnchantment.build(context)
         );
 
         // Greater Efficiency
         register(
                 context,
                 ModEnchantments.GREATER_EFFICIENCY,
-                GreaterEfficiency.build(context)
+                GreaterEfficiencyEnchantment.build(context)
+        );
+
+        // Soar
+        register(
+                context,
+                ModEnchantments.SOAR,
+                SoarEnchantment.build(context)
         );
     }
 

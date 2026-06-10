@@ -1,41 +1,38 @@
 package ciaabcdefg.oeam.enchantment.custom;
 
 import ciaabcdefg.oeam.OPEnchantsAndMore;
-import ciaabcdefg.oeam.enchantment.tag.ModEnchantmentTags;
+import ciaabcdefg.oeam.attribute.ModAttributes;
+import ciaabcdefg.oeam.item.tag.ModItemTags;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstrapContext;
 import net.minecraft.resources.Identifier;
-import net.minecraft.tags.ItemTags;
 import net.minecraft.world.entity.EquipmentSlotGroup;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
-import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.item.enchantment.EnchantmentEffectComponents;
 import net.minecraft.world.item.enchantment.LevelBasedValue;
 import net.minecraft.world.item.enchantment.effects.EnchantmentAttributeEffect;
 
-public class GreaterEfficiency {
+public class SoarEnchantment {
     public static Enchantment.Builder build(BootstrapContext<Enchantment> context) {
         var items = context.lookup(Registries.ITEM);
-        var enchantments = context.lookup(Registries.ENCHANTMENT);
         return Enchantment.enchantment(
                         Enchantment.definition(
-                                items.getOrThrow(ItemTags.MINING_ENCHANTABLE),
+                                items.getOrThrow(ModItemTags.FLYING_ENCHANTABLE),
                                 5,
-                                5,
-                                Enchantment.dynamicCost(5, 15),
-                                Enchantment.dynamicCost(60, 15),
+                                4,
+                                Enchantment.dynamicCost(1, 11),
+                                Enchantment.dynamicCost(21, 11),
                                 1,
-                                EquipmentSlotGroup.MAINHAND
+                                EquipmentSlotGroup.CHEST
                         )
                 )
-                .exclusiveWith(enchantments.getOrThrow(ModEnchantmentTags.EFFICIENCY_EXCLUSIVE))
                 .withEffect(
                         EnchantmentEffectComponents.ATTRIBUTES,
                         new EnchantmentAttributeEffect(
-                                Identifier.fromNamespaceAndPath(OPEnchantsAndMore.MOD_ID, "greater_efficiency"),
-                                Attributes.MINING_EFFICIENCY,
-                                new LevelBasedValue.LevelsSquared(28.0F),
+                                Identifier.fromNamespaceAndPath(OPEnchantsAndMore.MOD_ID, "soar"),
+                                ModAttributes.ELYTRA_SPEED_BONUS,
+                                LevelBasedValue.perLevel(2, 2.5F),
                                 AttributeModifier.Operation.ADD_VALUE
                         )
                 );
