@@ -1,5 +1,6 @@
 package ciaabcdefg.oeam.mixin;
 
+import ciaabcdefg.oeam.attribute.ModAttributes;
 import ciaabcdefg.oeam.enchantment.ModEnchantments;
 import ciaabcdefg.oeam.sound.ModSounds;
 import com.llamalad7.mixinextras.injector.ModifyExpressionValue;
@@ -70,40 +71,21 @@ public class CleaveMixin {
 
         if (!(self.level() instanceof ServerLevel level)) return;
 
-        float bonusSweepRatio;
-        float bbSize;
-        float range;
-
-        if (cleaveLevel == 1) {
-            bonusSweepRatio = 0.010F;
-            bbSize = 3F;
-            range = 3F;
-        } else if (cleaveLevel == 2) {
-            bonusSweepRatio = 0.035F;
-            bbSize = 5F;
-            range = 4F;
-        } else if (cleaveLevel == 3) {
-            bonusSweepRatio = 0.075F;
-            bbSize = 7F;
-            range = 7F;
-        } else {
-            bonusSweepRatio = 0.1F;
-            bbSize = 10F;
-            range = 10F;
-        }
+        float sweepMultiplier = 1F;
+        float range = (float)self.getAttributeValue(ModAttributes.SWEEPING_AREA);
 
         var stack = self.getWeaponItem();
         if (stack.is(ItemTags.AXES)) {
-            bonusSweepRatio *= 7.0F;
+            sweepMultiplier = 7.0F;
         }
 
         float rangeSqr = range * range;
-        float cleaveDamage = 1.0F + ((float)self.getAttributeValue(Attributes.SWEEPING_DAMAGE_RATIO) + bonusSweepRatio) * totalDamage;
+        float cleaveDamage = 1.0F + ((float)self.getAttributeValue(Attributes.SWEEPING_DAMAGE_RATIO) * sweepMultiplier) * totalDamage;
 
         var aabb = target.getBoundingBox().inflate(
-                bbSize,
-                bbSize * 0.2,
-                bbSize
+                range,
+                range * 0.2,
+                range
         );
 
         var nearbyEntities = level.getEntitiesOfClass(LivingEntity.class, aabb);
