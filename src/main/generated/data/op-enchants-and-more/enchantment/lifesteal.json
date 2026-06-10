@@ -3,6 +3,20 @@
   "description": {
     "translate": "enchantment.op-enchants-and-more.lifesteal"
   },
+  "effects": {
+    "minecraft:attributes": [
+      {
+        "amount": {
+          "type": "minecraft:linear",
+          "base": 0.1,
+          "per_level_above_first": 0.15
+        },
+        "attribute": "op-enchants-and-more:lifesteal",
+        "id": "op-enchants-and-more:lifesteal",
+        "operation": "add_value"
+      }
+    ]
+  },
   "max_cost": {
     "base": 21,
     "per_level_above_first": 11
