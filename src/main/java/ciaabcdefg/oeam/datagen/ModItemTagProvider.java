@@ -7,6 +7,7 @@ import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Items;
 import org.jspecify.annotations.NonNull;
 
 import java.util.concurrent.CompletableFuture;
@@ -21,5 +22,8 @@ public class ModItemTagProvider extends FabricTagsProvider.ItemTagsProvider {
         valueLookupBuilder(ModItemTags.CLEAVE_WEAPON_ENCHANTABLE)
                 .addOptionalTag(ItemTags.SWORDS)
                 .addOptionalTag(ItemTags.AXES);
+
+        valueLookupBuilder(ModItemTags.FLYING_ENCHANTABLE)
+                .add(Items.ELYTRA);
     }
 }
