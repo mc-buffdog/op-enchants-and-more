@@ -20,6 +20,9 @@
   "enchantment.op-enchants-and-more.soar": "Soar",
   "enchantment.op-enchants-and-more.soar.desc": "Increases elytra glide and rocket boost speeds.",
 
+  "enchantment.op-enchants-and-more.giant_slayer": "Giant Slayer",
+  "enchantment.op-enchants-and-more.giant_slayer.desc": "Deals extra damage based on the target's max HP.",
+
   "attribute.name.op-enchants-and-more.elytra_speed_bonus": "Elytra Speed Bonus",
   "attribute.name.op-enchants-and-more.lifesteal": "Lifesteal",
   "attribute.name.op-enchants-and-more.crit_chance": "Critical Chance",
