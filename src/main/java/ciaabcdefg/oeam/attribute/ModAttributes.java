@@ -9,6 +9,9 @@ import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.entity.ai.attributes.RangedAttribute;
 
 public class ModAttributes {
+    public static final Holder<Attribute> LIFESTEAL = register(
+            "lifesteal", 0, 0, 2, true
+    );
     public static final Holder<Attribute> ELYTRA_SPEED_BONUS = register(
             "elytra_speed_bonus", 0, -10, 10, true
     );
