@@ -17,6 +17,11 @@
   "enchantment.op-enchants-and-more.greater_efficiency": "効率強化・改",
   "enchantment.op-enchants-and-more.greater_efficiency.desc": "「効率強化」の強化版。",
 
+  "enchantment.op-enchants-and-more.soar": "滑空",
+  "enchantment.op-enchants-and-more.soar.desc": "エリトラの滑空速度・ロケット花火による加速度を増加させます。",
+
+  "attribute.name.op-enchants-and-more.elytra_speed_bonus": "滑空速度",
+
   "sounds.op-enchants-and-more.coup_de_grace": "「止め刺し」の攻撃",
   "sounds.op-enchants-and-more.cleave": "「なぎ払い」の攻撃",
   "sounds.op-enchants-and-more.splatter": "返り血の音"
