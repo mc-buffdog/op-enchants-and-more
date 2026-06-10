@@ -20,7 +20,14 @@
   "enchantment.op-enchants-and-more.soar": "滑空",
   "enchantment.op-enchants-and-more.soar.desc": "エリトラの滑空速度・ロケット花火による加速度を増加させます。",
 
+  "enchantment.op-enchants-and-more.giant_slayer": "巨人狩り",
+  "enchantment.op-enchants-and-more.giant_slayer.desc": "mobの最大体力の一部追加ダメージを与えます。",
+
   "attribute.name.op-enchants-and-more.elytra_speed_bonus": "滑空速度",
+  "attribute.name.op-enchants-and-more.lifesteal": "ライフスティール",
+  "attribute.name.op-enchants-and-more.crit_chance": "クリティカル確率",
+  "attribute.name.op-enchants-and-more.crit_damage_mul": "クリティカルDM倍率",
+  "attribute.name.op-enchants-and-more.sweeping_area": "攻撃範囲",
 
   "sounds.op-enchants-and-more.coup_de_grace": "「止め刺し」の攻撃",
   "sounds.op-enchants-and-more.cleave": "「なぎ払い」の攻撃",

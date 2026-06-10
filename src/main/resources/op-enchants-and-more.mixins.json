@@ -6,12 +6,13 @@
     "AnvilMenuMixin",
     "ButterflyMixin",
     "CleaveMixin",
-    "CoupDeGraceMixin",
+    "entity.PlayerMixin",
     "ElytraMixin",
     "FireworkRocketEntityMixin",
     "LifestealMixin",
+    "LivingEntityAttributesMixin",
     "LivingEntityInvoker",
-    "PlayerInvoker"
+    "entity.PlayerInvoker"
   ],
   "injectors": {
     "defaultRequire": 1

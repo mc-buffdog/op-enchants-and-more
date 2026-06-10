@@ -1,18 +1,18 @@
 {
   "enchantment.op-enchants-and-more.coup_de_grace": "การุณยฆาต",
-  "enchantment.op-enchants-and-more.coup_de_grace.desc": "เวลาโจมตีจะมีโอกาสติดคริตามความเสียหายที่ทำ",
+  "enchantment.op-enchants-and-more.coup_de_grace.desc": "เวลาโจมตีจะมีโอกาสติดคริ",
 
   "enchantment.op-enchants-and-more.lifesteal": "ดูดเลือด",
-  "enchantment.op-enchants-and-more.lifesteal.desc": "ฟื้นฟูเลือดตามความเสียหายที่ทำ",
+  "enchantment.op-enchants-and-more.lifesteal.desc": "ฟื้นฟูเลือดตามดาเมจที่ทำ",
 
   "enchantment.op-enchants-and-more.butterfly": "ดุจผีเสื้อ",
   "enchantment.op-enchants-and-more.butterfly.desc": "เพิ่มความเร็วการโจมตี",
 
   "enchantment.op-enchants-and-more.cleave": "ผ่าซาก",
-  "enchantment.op-enchants-and-more.cleave.desc": "ทำความเสียหายเป็นวงกว้าง",
+  "enchantment.op-enchants-and-more.cleave.desc": "ทำดาเมจเป็นวงกว้าง",
 
   "enchantment.op-enchants-and-more.greater_sharpness": "โคตรกวัดแกว่งดาบ",
-  "enchantment.op-enchants-and-more.greater_sharpness.desc": "เพิ่มความเสียหายอย่างมหาศาล",
+  "enchantment.op-enchants-and-more.greater_sharpness.desc": "เพิ่มดาเมจอย่างมหาศาล",
 
   "enchantment.op-enchants-and-more.greater_efficiency": "โคตรประสิทธิภาพ",
   "enchantment.op-enchants-and-more.greater_efficiency.desc": "เพิ่มความเร็วในการขุดอย่างมหาศาล",
@@ -20,7 +20,14 @@
   "enchantment.op-enchants-and-more.soar": "ล่องนภา",
   "enchantment.op-enchants-and-more.soar.desc": "เพิ่มความเร็วการร่อนและความเร่งจากพลุ",
 
+  "enchantment.op-enchants-and-more.giant_slayer": "คมสังหารยักษ์",
+  "enchantment.op-enchants-and-more.giant_slayer.desc": "ทำดาเมจเพิ่มเติมตามค่าชีวิตสูงสุดของศัตรู",
+
   "attribute.name.op-enchants-and-more.elytra_speed_bonus": "โบนัสความเร็วปีก",
+  "attribute.name.op-enchants-and-more.lifesteal": "เปอร์เซ็นต์ดูดเลือด",
+  "attribute.name.op-enchants-and-more.crit_chance": "โอกาสติดคริ",
+  "attribute.name.op-enchants-and-more.crit_damage_mul": "อัตราส่วนดาเมจจากคริ",
+  "attribute.name.op-enchants-and-more.sweeping_area": "ความกว้างการโจมตีแบบกวาด",
 
   "sounds.op-enchants-and-more.coup_de_grace": "ตีติดการุณยฆาต",
   "sounds.op-enchants-and-more.splatter": "เสียงเลือดหยด",

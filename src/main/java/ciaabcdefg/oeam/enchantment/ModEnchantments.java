@@ -21,6 +21,8 @@ public class ModEnchantments {
             = register("cleave");
     public static final ResourceKey<Enchantment> SOAR
             = register("soar");
+    public static final ResourceKey<Enchantment> GIANT_SLAYER
+            = register("giant_slayer");
 
     // Greater versions of vanilla enchantments
     public static final ResourceKey<Enchantment> GREATER_SHARPNESS
