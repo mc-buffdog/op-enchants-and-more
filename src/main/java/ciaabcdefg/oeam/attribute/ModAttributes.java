@@ -21,6 +21,9 @@ public class ModAttributes {
     public static final Holder<Attribute> ELYTRA_SPEED_BONUS = register(
             "elytra_speed_bonus", 0, -10, 10, true
     );
+    public static final Holder<Attribute> SWEEPING_AREA = register(
+            "sweeping_area", 0, 0.0, 100.0, true
+    );
 
     private static Holder<Attribute> register(
             String name, double defaultValue, double minValue, double maxValue, boolean syncedWithClient

@@ -18,6 +18,7 @@ public class LivingEntityAttributesMixin {
                 .add(ModAttributes.ELYTRA_SPEED_BONUS)
                 .add(ModAttributes.LIFESTEAL)
                 .add(ModAttributes.CRIT_CHANCE)
-                .add(ModAttributes.CRIT_DAMAGE_MUL);
+                .add(ModAttributes.CRIT_DAMAGE_MUL)
+                .add(ModAttributes.SWEEPING_AREA);
     }
 }
