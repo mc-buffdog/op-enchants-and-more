@@ -10,7 +10,7 @@ import net.minecraft.world.item.enchantment.EnchantmentEffectComponents;
 import net.minecraft.world.item.enchantment.LevelBasedValue;
 import net.minecraft.world.item.enchantment.effects.AddValue;
 
-public class GreaterSharpness {
+public class GreaterSharpnessEnchantment {
     public static Enchantment.Builder build(BootstrapContext<Enchantment> context) {
         var items = context.lookup(Registries.ITEM);
         var enchantments = context.lookup(Registries.ENCHANTMENT);
