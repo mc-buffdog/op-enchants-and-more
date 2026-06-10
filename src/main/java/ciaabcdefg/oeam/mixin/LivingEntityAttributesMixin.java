@@ -16,6 +16,8 @@ public class LivingEntityAttributesMixin {
     private static AttributeSupplier.Builder modifyAttributes(AttributeSupplier.Builder original) {
         return original
                 .add(ModAttributes.ELYTRA_SPEED_BONUS)
-                .add(ModAttributes.LIFESTEAL);
+                .add(ModAttributes.LIFESTEAL)
+                .add(ModAttributes.CRIT_CHANCE)
+                .add(ModAttributes.CRIT_DAMAGE_MUL);
     }
 }
