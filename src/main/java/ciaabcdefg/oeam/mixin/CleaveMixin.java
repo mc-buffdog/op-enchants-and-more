@@ -1,7 +1,9 @@
 package ciaabcdefg.oeam.mixin;
 
+import ciaabcdefg.oeam.OPEnchantsAndMore;
 import ciaabcdefg.oeam.attribute.ModAttributes;
 import ciaabcdefg.oeam.enchantment.ModEnchantments;
+import ciaabcdefg.oeam.enchantment.custom.CleaveEnchantment;
 import ciaabcdefg.oeam.mixin.entity.PlayerInvoker;
 import ciaabcdefg.oeam.sound.ModSounds;
 import com.llamalad7.mixinextras.injector.ModifyExpressionValue;
@@ -91,11 +93,16 @@ public class CleaveMixin {
 
         var nearbyEntities = level.getEntitiesOfClass(LivingEntity.class, aabb);
         var selfPos = self.position();
-        var dir = target.position().subtract(selfPos);
+        var dir = target.position().subtract(selfPos).normalize();
+        var cleaveAngle = CleaveEnchantment.CLEAVE_ANGLE.calculate(cleaveLevel);
 
         for (LivingEntity nearby : nearbyEntities) {
             if (nearby == target || self.isAlliedTo(nearby) || self.distanceToSqr(nearby) > rangeSqr) continue;
-            if (dir.dot(nearby.position().subtract(selfPos)) < 0.0F) continue;
+
+            double dot = dir.dot(nearby.position().subtract(selfPos).normalize());
+            double angle = Math.toDegrees(Math.acos(dot));
+
+            if (angle > cleaveAngle) continue;
 
             float enchantedDamage = invoker.invokeGetEnchantedDamage(nearby, cleaveDamage, damageSource);
             if (nearby.hurtServer(level, damageSource, enchantedDamage)) {

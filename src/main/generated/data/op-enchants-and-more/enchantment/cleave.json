@@ -9,7 +9,7 @@
         "amount": {
           "type": "minecraft:linear",
           "base": 3.0,
-          "per_level_above_first": 2.7
+          "per_level_above_first": 1.4
         },
         "attribute": "op-enchants-and-more:sweeping_area",
         "id": "op-enchants-and-more:sweep_area",

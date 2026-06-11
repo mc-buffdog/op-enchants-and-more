@@ -15,6 +15,8 @@ import net.minecraft.world.item.enchantment.LevelBasedValue;
 import net.minecraft.world.item.enchantment.effects.EnchantmentAttributeEffect;
 
 public class CleaveEnchantment {
+    public static LevelBasedValue CLEAVE_ANGLE = LevelBasedValue.perLevel(45F, 5F);
+
     public static Enchantment.Builder build(BootstrapContext<Enchantment> context) {
         var items = context.lookup(Registries.ITEM);
         return Enchantment.enchantment(
@@ -32,7 +34,7 @@ public class CleaveEnchantment {
                 new EnchantmentAttributeEffect(
                         Identifier.fromNamespaceAndPath(OPEnchantsAndMore.MOD_ID, "sweep_area"),
                         ModAttributes.SWEEPING_AREA,
-                        LevelBasedValue.perLevel(3F, 2.7F),
+                        LevelBasedValue.perLevel(3F, 1.4F),
                         AttributeModifier.Operation.ADD_VALUE
                 )
         ).withEffect(
