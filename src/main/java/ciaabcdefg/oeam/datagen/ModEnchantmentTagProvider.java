@@ -25,7 +25,10 @@ public class ModEnchantmentTagProvider extends FabricTagsProvider<Enchantment> {
                 .add(ModEnchantments.LIFESTEAL)
                 .add(ModEnchantments.BUTTERFLY)
                 .add(ModEnchantments.GREATER_SHARPNESS)
-                .add(ModEnchantments.GREATER_EFFICIENCY);
+                .add(ModEnchantments.GREATER_EFFICIENCY)
+                .add(ModEnchantments.SOAR)
+                .add(ModEnchantments.CLEAVE)
+                .add(ModEnchantments.GIANT_SLAYER);
 
         builder(ModEnchantmentTags.EFFICIENCY_EXCLUSIVE)
                 .add(ModEnchantments.GREATER_EFFICIENCY)
