@@ -23,9 +23,10 @@
 | Enchantment | Description | On |
 | --- | --- | --- |
 | Greater Efficiency | Better version of _Efficiency_ | Pickaxes, Axes, Hoes, Shovels |
+| Greater Protection | Better version of _Protection_ | Armor |
+| Greater Fortune | Better version of _Fortune_ | Pickaxes, Axes, Hoes, Shovels |
 
 ### Misc
 | Enchantment | Description | On |
 | --- | --- | --- |
 | Soar | Increases elytra gliding speed and rocket boost speed | Elytras |
- 
