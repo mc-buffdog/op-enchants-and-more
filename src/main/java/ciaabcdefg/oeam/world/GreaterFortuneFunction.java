@@ -1,6 +1,5 @@
 package ciaabcdefg.oeam.world;
 
-import ciaabcdefg.oeam.OPEnchantsAndMore;
 import ciaabcdefg.oeam.block.tag.ModBlockTags;
 import com.mojang.serialization.MapCodec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
