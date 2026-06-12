@@ -22,7 +22,7 @@
           "per_level_above_first": 0.03
         },
         "attribute": "minecraft:sweeping_damage_ratio",
-        "id": "op-enchants-and-more:sweep_area",
+        "id": "op-enchants-and-more:sweep_damage_ratio",
         "operation": "add_value"
       }
     ]

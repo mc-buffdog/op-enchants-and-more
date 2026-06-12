@@ -40,7 +40,7 @@ public class CleaveEnchantment {
         ).withEffect(
                 EnchantmentEffectComponents.ATTRIBUTES,
                 new EnchantmentAttributeEffect(
-                        Identifier.fromNamespaceAndPath(OPEnchantsAndMore.MOD_ID, "sweep_area"),
+                        Identifier.fromNamespaceAndPath(OPEnchantsAndMore.MOD_ID, "sweep_damage_ratio"),
                         Attributes.SWEEPING_DAMAGE_RATIO,
                         LevelBasedValue.perLevel(0.010F, 0.03F),
                         AttributeModifier.Operation.ADD_VALUE
