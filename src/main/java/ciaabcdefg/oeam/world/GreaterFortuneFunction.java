@@ -42,17 +42,11 @@ public class GreaterFortuneFunction extends LootItemConditionalFunction {
         ItemInstance tool = context.getOptionalParameter(LootContextParams.TOOL);
         if (tool == null) return stack;
 
-        OPEnchantsAndMore.LOGGER.info("hello");
-
         int level = EnchantmentHelper.getItemEnchantmentLevel(this.enchantment, tool);
         if (level <= 0) return stack;
 
-        OPEnchantsAndMore.LOGGER.info("hello1");
-
         var blockState = context.getOptionalParameter(LootContextParams.BLOCK_STATE);
         if (blockState == null || !blockState.is(ModBlockTags.AFFECTED_BY_GREATER_FORTUNE)) return stack;
-
-        OPEnchantsAndMore.LOGGER.info("hello2");
 
         stack.setCount(calculateNewCount(context.getRandom(), stack.getCount(), level));
         return stack;
