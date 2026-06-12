@@ -3,43 +3,19 @@
   "description": {
     "translate": "enchantment.op-enchants-and-more.coup_de_grace"
   },
-  "effects": {
-    "minecraft:attributes": [
-      {
-        "amount": {
-          "type": "minecraft:linear",
-          "base": 0.34,
-          "per_level_above_first": 0.035
-        },
-        "attribute": "op-enchants-and-more:crit_chance",
-        "id": "op-enchants-and-more:crit_chance",
-        "operation": "add_value"
-      },
-      {
-        "amount": {
-          "type": "minecraft:linear",
-          "base": 2.0,
-          "per_level_above_first": 1.25
-        },
-        "attribute": "op-enchants-and-more:crit_damage_mul",
-        "id": "op-enchants-and-more:crit_damage_mul",
-        "operation": "add_value"
-      }
-    ]
-  },
   "max_cost": {
-    "base": 21,
-    "per_level_above_first": 11
+    "base": 25,
+    "per_level_above_first": 15
   },
   "max_level": 3,
   "min_cost": {
-    "base": 1,
-    "per_level_above_first": 11
+    "base": 10,
+    "per_level_above_first": 15
   },
   "primary_items": "#minecraft:swords",
   "slots": [
     "mainhand"
   ],
   "supported_items": "#minecraft:enchantable/weapon",
-  "weight": 10
+  "weight": 3
 }

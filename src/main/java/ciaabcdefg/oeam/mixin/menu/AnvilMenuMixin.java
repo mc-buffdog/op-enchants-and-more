@@ -1,6 +1,5 @@
-package ciaabcdefg.oeam.mixin;
+package ciaabcdefg.oeam.mixin.menu;
 
-import ciaabcdefg.oeam.OPEnchantsAndMore;
 import ciaabcdefg.oeam.enchantment.ModEnchantments;
 import com.llamalad7.mixinextras.sugar.Local;
 import net.minecraft.core.Holder;
@@ -32,6 +31,8 @@ public class AnvilMenuMixin {
     private void test(CallbackInfo ci, @Local(name = "enchantments") ItemEnchantments.Mutable enchantments) {
         enchantmentsPrecedence(enchantments, ModEnchantments.GREATER_EFFICIENCY, Enchantments.EFFICIENCY);
         enchantmentsPrecedence(enchantments, ModEnchantments.GREATER_SHARPNESS, Enchantments.SHARPNESS);
+        enchantmentsPrecedence(enchantments, ModEnchantments.GREATER_PROTECTION, Enchantments.PROTECTION);
+        enchantmentsPrecedence(enchantments, ModEnchantments.GREATER_FORTUNE, Enchantments.FORTUNE);
     }
 
     @Redirect(
@@ -45,6 +46,8 @@ public class AnvilMenuMixin {
         return
                 allowEnchantments(enchantment, other, ModEnchantments.GREATER_EFFICIENCY, Enchantments.EFFICIENCY) ||
                 allowEnchantments(enchantment, other, ModEnchantments.GREATER_SHARPNESS, Enchantments.SHARPNESS) ||
+                allowEnchantments(enchantment, other, ModEnchantments.GREATER_PROTECTION, Enchantments.PROTECTION) ||
+                allowEnchantments(enchantment, other, ModEnchantments.GREATER_FORTUNE, Enchantments.FORTUNE) ||
                 Enchantment.areCompatible(enchantment, other);
     }
 

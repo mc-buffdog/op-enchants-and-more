@@ -71,6 +71,20 @@ public class ModEnchantmentProvider extends FabricDynamicRegistryProvider {
                 GreaterEfficiencyEnchantment.build(context)
         );
 
+        // Greater Protection
+        register(
+                context,
+                ModEnchantments.GREATER_PROTECTION,
+                GreaterProtectionEnchantment.build(context)
+        );
+
+        // Greater Fortune
+        register(
+                context,
+                ModEnchantments.GREATER_FORTUNE,
+                GreaterFortuneEnchantment.build(context)
+        );
+
         // Soar
         register(
                 context,

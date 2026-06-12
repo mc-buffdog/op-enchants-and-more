@@ -1,4 +1,4 @@
-package ciaabcdefg.oeam.mixin;
+package ciaabcdefg.oeam.mixin.entity.living;
 
 import ciaabcdefg.oeam.attribute.ModAttributes;
 import com.llamalad7.mixinextras.injector.ModifyReturnValue;
@@ -9,6 +9,7 @@ import org.spongepowered.asm.mixin.injection.At;
 
 @Mixin(LivingEntity.class)
 public class LivingEntityAttributesMixin {
+    //-- ATTRIBUTES -- //
     @ModifyReturnValue(
             method = "createLivingAttributes",
             at = @At("RETURN")

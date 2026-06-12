@@ -1,4 +1,4 @@
-package ciaabcdefg.oeam.mixin;
+package ciaabcdefg.oeam.mixin.item;
 
 import ciaabcdefg.oeam.attribute.ModAttributes;
 import com.llamalad7.mixinextras.sugar.Local;
@@ -14,10 +14,10 @@ import java.text.DecimalFormat;
 
 @SuppressWarnings("deprecation")
 @Mixin(ItemAttributeModifiers.Display.Default.class)
-public class ItemAttributeModifiersMixin {
+public class ItemAttributeModifiersDefaultDisplayMixin {
     @Unique
     private static boolean isPercent(Holder<Attribute> attribute) {
-        return attribute.is(ModAttributes.LIFESTEAL) || attribute.is(ModAttributes.CRIT_CHANCE);
+        return attribute.is(ModAttributes.LIFESTEAL);
     }
 
     @Redirect(

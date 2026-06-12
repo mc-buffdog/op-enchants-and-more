@@ -1,4 +1,4 @@
-package ciaabcdefg.oeam.mixin;
+package ciaabcdefg.oeam.mixin.entity.living;
 
 import ciaabcdefg.oeam.attribute.ModAttributes;
 import net.minecraft.world.entity.LivingEntity;
@@ -9,7 +9,7 @@ import org.spongepowered.asm.mixin.injection.ModifyArgs;
 import org.spongepowered.asm.mixin.injection.invoke.arg.Args;
 
 @Mixin(LivingEntity.class)
-public class ElytraMixin {
+public class LivingEntityDragMixin {
     @Unique
     private static double map(double value, double start1, double stop1, double start2, double stop2) {
         return start2 + (stop2 - start2) * ((value - start1) / (stop1 - start1));

@@ -4,18 +4,18 @@
     "translate": "enchantment.op-enchants-and-more.giant_slayer"
   },
   "max_cost": {
-    "base": 21,
-    "per_level_above_first": 11
+    "base": 15,
+    "per_level_above_first": 15
   },
   "max_level": 3,
   "min_cost": {
-    "base": 1,
-    "per_level_above_first": 11
+    "base": 5,
+    "per_level_above_first": 10
   },
   "primary_items": "#minecraft:swords",
   "slots": [
     "mainhand"
   ],
   "supported_items": "#minecraft:enchantable/weapon",
-  "weight": 10
+  "weight": 2
 }
