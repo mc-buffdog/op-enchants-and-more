@@ -1,8 +1,9 @@
-package ciaabcdefg.oeam.mixin.entity;
+package ciaabcdefg.oeam.mixin.entity.player;
 
-import ciaabcdefg.oeam.attribute.ModAttributes;
 import ciaabcdefg.oeam.enchantment.ModEnchantments;
+import ciaabcdefg.oeam.enchantment.custom.CoupDeGraceEnchantment;
 import ciaabcdefg.oeam.enchantment.custom.GiantSlayerEnchantment;
+import ciaabcdefg.oeam.mixin.accessor.PlayerInvoker;
 import ciaabcdefg.oeam.particle.ModParticles;
 import ciaabcdefg.oeam.sound.ModSounds;
 import ciaabcdefg.oeam.util.ModEnchantmentUtil;
@@ -20,7 +21,8 @@ import org.spongepowered.asm.mixin.injection.ModifyVariable;
 import org.spongepowered.asm.mixin.injection.Redirect;
 
 @Mixin(Player.class)
-public abstract class PlayerMixin {
+public abstract class PlayerDamageMixin {
+    //-- MODIFY DAMAGE (COUP DE GRACE/GIANT SLAYER) --//
     @ModifyVariable(
             method = "attack",
             at = @At(
@@ -29,7 +31,12 @@ public abstract class PlayerMixin {
                     shift = At.Shift.AFTER
             ),
             name = "totalDamage")
-    private float modifyDamage(float totalDamage, Entity entity, @Local(name = "fullStrengthAttack") boolean fullStrengthAttack) {
+    private float modifyDamage(
+            float totalDamage,
+            Entity entity,
+            @Local(name = "fullStrengthAttack")
+            boolean fullStrengthAttack
+    ) {
         var self = (Player)(Object) this;
 
         if (!(entity instanceof LivingEntity target))
@@ -40,27 +47,30 @@ public abstract class PlayerMixin {
             return totalDamage;
 
         var itemStack = self.getWeaponItem();
+        if (itemStack == null) return totalDamage;
+
         int giantSlayerLevel = ModEnchantmentUtil.getEnchantmentLevel(itemStack, ModEnchantments.GIANT_SLAYER);
+        int coupDeGraceLevel = ModEnchantmentUtil.getEnchantmentLevel(itemStack, ModEnchantments.COUP_DE_GRACE);
 
         if (giantSlayerLevel > 0) {
             totalDamage = giantSlayerPipe(self, target, serverLevel, totalDamage, giantSlayerLevel);
         }
 
-        if (fullStrengthAttack) {
-            totalDamage = coupDeGracePipe(self, target, serverLevel, totalDamage);
+        if (fullStrengthAttack && coupDeGraceLevel > 0) {
+            totalDamage = coupDeGracePipe(self, target, serverLevel, totalDamage, coupDeGraceLevel);
         }
 
         return totalDamage;
     }
 
     @Unique
-    private static float coupDeGracePipe(Player player, LivingEntity target, ServerLevel level, float damage) {
-        double chance = player.getAttributeValue(ModAttributes.CRIT_CHANCE);
+    private static float coupDeGracePipe(Player player, LivingEntity target, ServerLevel level, float damage, int coupDeGraceLevel) {
+        float chance = CoupDeGraceEnchantment.calculateCritChance(coupDeGraceLevel);
         if (player.getRandom().nextDouble() >= chance) {
             return damage;
         }
 
-        float damageMultiplier = Math.max((float)player.getAttributeValue(ModAttributes.CRIT_DAMAGE_MUL), 1.0F);
+        float damageMultiplier = CoupDeGraceEnchantment.calculateCritDamageMul(coupDeGraceLevel);
         var targetPos = target.blockPosition();
 
         level.playSound(null, targetPos, ModSounds.COUP_DE_GRACE, SoundSource.PLAYERS, 1f, 1f);

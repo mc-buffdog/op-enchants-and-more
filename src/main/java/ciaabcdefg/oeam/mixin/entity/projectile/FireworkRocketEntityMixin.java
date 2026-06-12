@@ -1,4 +1,4 @@
-package ciaabcdefg.oeam.mixin;
+package ciaabcdefg.oeam.mixin.entity.projectile;
 
 import ciaabcdefg.oeam.attribute.ModAttributes;
 import com.llamalad7.mixinextras.sugar.Local;

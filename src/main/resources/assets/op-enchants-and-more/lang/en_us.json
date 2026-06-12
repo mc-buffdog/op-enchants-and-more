@@ -29,6 +29,14 @@
   "attribute.name.op-enchants-and-more.crit_damage_mul": "Critical Damage Multiplier",
   "attribute.name.op-enchants-and-more.sweeping_area": "Sweeping Area",
 
+  "enchantment.effect.tooltip.op-enchants-and-more.lifesteal": "%s Lifesteal",
+  "enchantment.effect.tooltip.op-enchants-and-more.crit_chance": "%s Critical Chance",
+  "enchantment.effect.tooltip.op-enchants-and-more.crit_damage_mul": "%s Critical Damage Multiplier",
+  "enchantment.effect.tooltip.op-enchants-and-more.cleave_range": "%s Cleave Range",
+  "enchantment.effect.tooltip.op-enchants-and-more.cleave_bonus": "%s Bonus Sweep Damage Ratio",
+  "enchantment.effect.tooltip.op-enchants-and-more.cleave_angle": "%s Cleave Angle",
+  "enchantment.effect.tooltip.op-enchants-and-more.damage_percent_max_hp": "%s Max HP Damage",
+
   "sounds.op-enchants-and-more.coup_de_grace": "Coup De Grâce hit",
   "sounds.op-enchants-and-more.cleave": "Cleave",
   "sounds.op-enchants-and-more.splatter": "Blood splatter"
