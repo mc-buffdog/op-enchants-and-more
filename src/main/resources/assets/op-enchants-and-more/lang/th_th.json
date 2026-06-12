@@ -17,6 +17,12 @@
   "enchantment.op-enchants-and-more.greater_efficiency": "โคตรประสิทธิภาพ",
   "enchantment.op-enchants-and-more.greater_efficiency.desc": "เพิ่มความเร็วในการขุดอย่างมหาศาล",
 
+  "enchantment.op-enchants-and-more.greater_protection": "โคตรทนดาเมจ",
+  "enchantment.op-enchants-and-more.greater_protection.desc": "ลดดาเมจที่ได้รับอย่างมหาศาล",
+
+  "enchantment.op-enchants-and-more.greater_fortune": "โคตรโชคลาภ",
+  "enchantment.op-enchants-and-more.greater_fortune.desc": "เพิ่มผลผลิตการขุดอย่างมหาศาล",
+
   "enchantment.op-enchants-and-more.soar": "ล่องนภา",
   "enchantment.op-enchants-and-more.soar.desc": "เพิ่มความเร็วการร่อนและความเร่งจากพลุ",
 
@@ -28,6 +34,14 @@
   "attribute.name.op-enchants-and-more.crit_chance": "โอกาสติดคริ",
   "attribute.name.op-enchants-and-more.crit_damage_mul": "อัตราส่วนดาเมจจากคริ",
   "attribute.name.op-enchants-and-more.sweeping_area": "ความกว้างการโจมตีแบบกวาด",
+
+  "enchantment.effect.tooltip.op-enchants-and-more.lifesteal": "%s ดูดเลือด",
+  "enchantment.effect.tooltip.op-enchants-and-more.crit_chance": "%s โอกาสติดคริ",
+  "enchantment.effect.tooltip.op-enchants-and-more.crit_damage_mul": "%s ดาเมจคริ",
+  "enchantment.effect.tooltip.op-enchants-and-more.cleave_range": "%s ระยะการโจมตีแบบกวาด",
+  "enchantment.effect.tooltip.op-enchants-and-more.cleave_bonus": "%s อัตราส่วนดาเมจแบบกวาดเพิ่มเติม",
+  "enchantment.effect.tooltip.op-enchants-and-more.cleave_angle": "%s องศาการโจมตีแบบกวาด",
+  "enchantment.effect.tooltip.op-enchants-and-more.damage_percent_max_hp": "%s ดาเมจคิดตามค่าชีวิตสูงสุด",
 
   "sounds.op-enchants-and-more.coup_de_grace": "ตีติดการุณยฆาต",
   "sounds.op-enchants-and-more.splatter": "เสียงเลือดหยด",
