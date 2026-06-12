@@ -22,7 +22,7 @@ public final class CoupDeGraceEnchantment {
                 Enchantment.definition(
                         items.getOrThrow(ItemTags.WEAPON_ENCHANTABLE),
                         items.getOrThrow(ItemTags.SWORDS),
-                        4,
+                        7,
                         3,
                         Enchantment.dynamicCost(5, 25),
                         Enchantment.dynamicCost(25, 15),
