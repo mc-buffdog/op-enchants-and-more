@@ -1,4 +1,4 @@
-package ciaabcdefg.oeam.mixin;
+package ciaabcdefg.oeam.mixin.invoker;
 
 import net.minecraft.world.entity.LivingEntity;
 import org.spongepowered.asm.mixin.Mixin;

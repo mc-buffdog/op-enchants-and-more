@@ -14,10 +14,10 @@ import java.text.DecimalFormat;
 
 @SuppressWarnings("deprecation")
 @Mixin(ItemAttributeModifiers.Display.Default.class)
-public class ItemAttributeModifiersMixin {
+public class ItemAttributeModifiersDefaultDisplayMixin {
     @Unique
     private static boolean isPercent(Holder<Attribute> attribute) {
-        return attribute.is(ModAttributes.LIFESTEAL) || attribute.is(ModAttributes.CRIT_CHANCE);
+        return attribute.is(ModAttributes.LIFESTEAL);
     }
 
     @Redirect(

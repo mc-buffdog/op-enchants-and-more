@@ -14,6 +14,9 @@ import net.minecraft.world.item.enchantment.LevelBasedValue;
 import net.minecraft.world.item.enchantment.effects.EnchantmentAttributeEffect;
 
 public final class CoupDeGraceEnchantment {
+    public static final LevelBasedValue CRIT_CHANCE = LevelBasedValue.perLevel(0.34F, 0.035F);
+    public static final LevelBasedValue CRIT_DAMAGE_MUL = LevelBasedValue.perLevel(2.0F, 1.25F);
+
     public static Enchantment.Builder build(BootstrapContext<Enchantment> context) {
         var items = context.lookup(Registries.ITEM);
         return Enchantment.enchantment(
@@ -27,22 +30,14 @@ public final class CoupDeGraceEnchantment {
                         1,
                         EquipmentSlotGroup.MAINHAND
                 )
-        ).withEffect(
-                EnchantmentEffectComponents.ATTRIBUTES,
-                new EnchantmentAttributeEffect(
-                        Identifier.fromNamespaceAndPath(OPEnchantsAndMore.MOD_ID, "crit_chance"),
-                        ModAttributes.CRIT_CHANCE,
-                        LevelBasedValue.perLevel(0.34F, 0.035F),
-                        AttributeModifier.Operation.ADD_VALUE
-                )
-        ).withEffect(
-                EnchantmentEffectComponents.ATTRIBUTES,
-                new EnchantmentAttributeEffect(
-                        Identifier.fromNamespaceAndPath(OPEnchantsAndMore.MOD_ID, "crit_damage_mul"),
-                        ModAttributes.CRIT_DAMAGE_MUL,
-                        LevelBasedValue.perLevel(2.0F, 1.25F),
-                        AttributeModifier.Operation.ADD_VALUE
-                )
         );
+    }
+
+    public static float calculateCritChance(int level) {
+        return Math.max(CRIT_CHANCE.calculate(level), 0F);
+    }
+
+    public static float calculateCritDamageMul(int level) {
+        return Math.max(CRIT_DAMAGE_MUL.calculate(level), 1.0F);
     }
 }

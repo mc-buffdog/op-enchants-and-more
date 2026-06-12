@@ -4,16 +4,12 @@
   "compatibilityLevel": "JAVA_25",
   "mixins": [
     "AnvilMenuMixin",
-    "ButterflyMixin",
-    "CleaveMixin",
-    "ElytraMixin",
     "FireworkRocketEntityMixin",
-    "ItemAttributeModifiersMixin",
-    "LifestealMixin",
-    "LivingEntityAttributesMixin",
-    "LivingEntityInvoker",
-    "entity.PlayerInvoker",
-    "entity.PlayerMixin"
+    "ItemAttributeModifiersDefaultDisplayMixin",
+    "LivingEntityMixin",
+    "PlayerMixin",
+    "invoker.LivingEntityInvoker",
+    "invoker.PlayerInvoker"
   ],
   "injectors": {
     "defaultRequire": 1
