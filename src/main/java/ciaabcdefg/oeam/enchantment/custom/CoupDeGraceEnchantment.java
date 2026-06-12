@@ -22,9 +22,9 @@ public final class CoupDeGraceEnchantment {
                 Enchantment.definition(
                         items.getOrThrow(ItemTags.WEAPON_ENCHANTABLE),
                         items.getOrThrow(ItemTags.SWORDS),
-                        7,
                         3,
-                        Enchantment.dynamicCost(5, 25),
+                        3,
+                        Enchantment.dynamicCost(10, 15),
                         Enchantment.dynamicCost(25, 15),
                         1,
                         EquipmentSlotGroup.MAINHAND

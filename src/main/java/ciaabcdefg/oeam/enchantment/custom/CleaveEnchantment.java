@@ -22,10 +22,10 @@ public class CleaveEnchantment {
         return Enchantment.enchantment(
                 Enchantment.definition(
                         items.getOrThrow(ModItemTags.CLEAVE_WEAPON_ENCHANTABLE),
-                        10,
+                        3,
                         4,
-                        Enchantment.dynamicCost(1, 11),
-                        Enchantment.dynamicCost(21, 11),
+                        Enchantment.dynamicCost(5, 15),
+                        Enchantment.dynamicCost(25, 15),
                         1,
                         EquipmentSlotGroup.MAINHAND
                 )

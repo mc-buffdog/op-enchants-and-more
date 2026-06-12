@@ -18,10 +18,10 @@ public class GreaterSharpnessEnchantment {
                         Enchantment.definition(
                                 items.getOrThrow(ItemTags.SHARP_WEAPON_ENCHANTABLE),
                                 items.getOrThrow(ItemTags.MELEE_WEAPON_ENCHANTABLE),
+                                4,
                                 5,
-                                5,
-                                Enchantment.dynamicCost(5, 15),
-                                Enchantment.dynamicCost(25, 15),
+                                Enchantment.dynamicCost(5, 20),
+                                Enchantment.dynamicCost(40, 20),
                                 1,
                                 EquipmentSlotGroup.MAINHAND
                         )

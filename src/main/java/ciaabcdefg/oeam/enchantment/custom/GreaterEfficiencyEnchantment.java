@@ -19,10 +19,10 @@ public class GreaterEfficiencyEnchantment {
         return Enchantment.enchantment(
                         Enchantment.definition(
                                 items.getOrThrow(ItemTags.MINING_ENCHANTABLE),
+                                4,
                                 5,
-                                5,
-                                Enchantment.dynamicCost(5, 15),
-                                Enchantment.dynamicCost(60, 15),
+                                Enchantment.dynamicCost(5, 20),
+                                Enchantment.dynamicCost(40, 20),
                                 1,
                                 EquipmentSlotGroup.MAINHAND
                         )

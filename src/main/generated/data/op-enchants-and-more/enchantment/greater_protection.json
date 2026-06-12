@@ -30,17 +30,17 @@
   },
   "exclusive_set": "#minecraft:exclusive_set/armor",
   "max_cost": {
-    "base": 60,
-    "per_level_above_first": 15
+    "base": 40,
+    "per_level_above_first": 20
   },
   "max_level": 4,
   "min_cost": {
     "base": 5,
-    "per_level_above_first": 15
+    "per_level_above_first": 20
   },
   "slots": [
     "armor"
   ],
   "supported_items": "#minecraft:enchantable/armor",
-  "weight": 5
+  "weight": 4
 }

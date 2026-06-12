@@ -21,10 +21,10 @@ public class GreaterProtectionEnchantment {
         return Enchantment.enchantment(
                         Enchantment.definition(
                                 items.getOrThrow(ItemTags.ARMOR_ENCHANTABLE),
-                                5,
                                 4,
-                                Enchantment.dynamicCost(5, 15),
-                                Enchantment.dynamicCost(60, 15),
+                                4,
+                                Enchantment.dynamicCost(5, 20),
+                                Enchantment.dynamicCost(40, 20),
                                 1,
                                 EquipmentSlotGroup.ARMOR
                         )
