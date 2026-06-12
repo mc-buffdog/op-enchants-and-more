@@ -17,6 +17,12 @@
   "enchantment.op-enchants-and-more.greater_efficiency": "効率強化・改",
   "enchantment.op-enchants-and-more.greater_efficiency.desc": "「効率強化」の強化版。",
 
+  "enchantment.op-enchants-and-more.greater_protection": "ダメージ軽減・改",
+  "enchantment.op-enchants-and-more.greater_protection.desc": "「ダメージ軽減」の強化版。",
+
+  "enchantment.op-enchants-and-more.greater_fortune": "幸運・改",
+  "enchantment.op-enchants-and-more.greater_fortune.desc": "「幸運」の強化版。",
+
   "enchantment.op-enchants-and-more.soar": "滑空",
   "enchantment.op-enchants-and-more.soar.desc": "エリトラの滑空速度・ロケット花火による加速度を増加させます。",
 
@@ -28,6 +34,14 @@
   "attribute.name.op-enchants-and-more.crit_chance": "クリティカル確率",
   "attribute.name.op-enchants-and-more.crit_damage_mul": "クリティカルDM倍率",
   "attribute.name.op-enchants-and-more.sweeping_area": "攻撃範囲",
+
+  "enchantment.effect.tooltip.op-enchants-and-more.lifesteal": "%s ライフスティール",
+  "enchantment.effect.tooltip.op-enchants-and-more.crit_chance": "%s クリティカル確率",
+  "enchantment.effect.tooltip.op-enchants-and-more.crit_damage_mul": "%s クリティカルDM倍率",
+  "enchantment.effect.tooltip.op-enchants-and-more.cleave_range": "%s 攻撃範囲",
+  "enchantment.effect.tooltip.op-enchants-and-more.cleave_bonus": "%s 追加範囲ダメージ",
+  "enchantment.effect.tooltip.op-enchants-and-more.cleave_angle": "%s 範囲攻撃°",
+  "enchantment.effect.tooltip.op-enchants-and-more.damage_percent_max_hp": "%s 最大体力割合ダメージ",
 
   "sounds.op-enchants-and-more.coup_de_grace": "「止め刺し」の攻撃",
   "sounds.op-enchants-and-more.cleave": "「なぎ払い」の攻撃",

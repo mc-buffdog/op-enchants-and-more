@@ -21,10 +21,10 @@ public final class GiantSlayerEnchantment {
                 Enchantment.definition(
                         items.getOrThrow(ItemTags.WEAPON_ENCHANTABLE),
                         items.getOrThrow(ItemTags.SWORDS),
-                        10,
+                        2,
                         3,
-                        Enchantment.dynamicCost(1, 11),
-                        Enchantment.dynamicCost(21, 11),
+                        Enchantment.dynamicCost(5, 10),
+                        Enchantment.dynamicCost(15, 15),
                         1,
                         EquipmentSlotGroup.MAINHAND
                 )

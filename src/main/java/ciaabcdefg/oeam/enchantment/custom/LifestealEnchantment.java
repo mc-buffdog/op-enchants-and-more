@@ -20,7 +20,7 @@ public final class LifestealEnchantment {
         return Enchantment.enchantment(
                 Enchantment.definition(
                         items.getOrThrow(ItemTags.WEAPON_ENCHANTABLE),
-                        10,
+                        3,
                         5,
                         Enchantment.dynamicCost(1, 11),
                         Enchantment.dynamicCost(21, 11),

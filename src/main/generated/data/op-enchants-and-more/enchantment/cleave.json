@@ -4,17 +4,17 @@
     "translate": "enchantment.op-enchants-and-more.cleave"
   },
   "max_cost": {
-    "base": 21,
-    "per_level_above_first": 11
+    "base": 25,
+    "per_level_above_first": 15
   },
   "max_level": 4,
   "min_cost": {
-    "base": 1,
-    "per_level_above_first": 11
+    "base": 5,
+    "per_level_above_first": 15
   },
   "slots": [
     "mainhand"
   ],
   "supported_items": "#op-enchants-and-more:enchantable/cleave_weapon",
-  "weight": 10
+  "weight": 3
 }

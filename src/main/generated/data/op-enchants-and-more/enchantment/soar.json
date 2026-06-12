@@ -18,17 +18,17 @@
     ]
   },
   "max_cost": {
-    "base": 21,
-    "per_level_above_first": 11
+    "base": 25,
+    "per_level_above_first": 20
   },
   "max_level": 4,
   "min_cost": {
-    "base": 1,
-    "per_level_above_first": 11
+    "base": 10,
+    "per_level_above_first": 15
   },
   "slots": [
     "chest"
   ],
   "supported_items": "#op-enchants-and-more:enchantable/flying",
-  "weight": 5
+  "weight": 3
 }

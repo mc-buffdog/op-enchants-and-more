@@ -29,6 +29,10 @@ public class ModEnchantments {
             = register("greater_sharpness");
     public static final ResourceKey<Enchantment> GREATER_EFFICIENCY
             = register("greater_efficiency");
+    public static final ResourceKey<Enchantment> GREATER_PROTECTION
+            = register("greater_protection");
+    public static final ResourceKey<Enchantment> GREATER_FORTUNE
+            = register("greater_fortune");
 
     // Methods
     private static ResourceKey<Enchantment> register(String id) {
