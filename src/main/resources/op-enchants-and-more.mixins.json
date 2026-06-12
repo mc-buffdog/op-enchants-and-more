@@ -6,10 +6,14 @@
     "AnvilMenuMixin",
     "FireworkRocketEntityMixin",
     "ItemAttributeModifiersDefaultDisplayMixin",
-    "LivingEntityMixin",
-    "PlayerMixin",
     "invoker.LivingEntityInvoker",
-    "invoker.PlayerInvoker"
+    "invoker.PlayerInvoker",
+    "livingentity.LivingEntityAttributesMixin",
+    "livingentity.LivingEntityDragMixin",
+    "livingentity.LivingEntityHurtMixin",
+    "livingentity.LivingEntitySwingMixin",
+    "player.PlayerDamageMixin",
+    "player.PlayerSweepMixin"
   ],
   "injectors": {
     "defaultRequire": 1
