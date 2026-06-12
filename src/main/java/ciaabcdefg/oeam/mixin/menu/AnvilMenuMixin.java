@@ -1,6 +1,5 @@
-package ciaabcdefg.oeam.mixin;
+package ciaabcdefg.oeam.mixin.menu;
 
-import ciaabcdefg.oeam.OPEnchantsAndMore;
 import ciaabcdefg.oeam.enchantment.ModEnchantments;
 import com.llamalad7.mixinextras.sugar.Local;
 import net.minecraft.core.Holder;

@@ -1,9 +1,9 @@
-package ciaabcdefg.oeam.mixin.player;
+package ciaabcdefg.oeam.mixin.entity.player;
 
 import ciaabcdefg.oeam.attribute.ModAttributes;
 import ciaabcdefg.oeam.enchantment.ModEnchantments;
 import ciaabcdefg.oeam.enchantment.custom.CleaveEnchantment;
-import ciaabcdefg.oeam.mixin.invoker.PlayerInvoker;
+import ciaabcdefg.oeam.mixin.accessor.PlayerInvoker;
 import ciaabcdefg.oeam.sound.ModSounds;
 import ciaabcdefg.oeam.util.ModEnchantmentUtil;
 import com.llamalad7.mixinextras.injector.ModifyExpressionValue;

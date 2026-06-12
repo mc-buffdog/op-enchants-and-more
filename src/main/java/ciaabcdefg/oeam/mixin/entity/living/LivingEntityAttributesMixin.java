@@ -1,4 +1,4 @@
-package ciaabcdefg.oeam.mixin.livingentity;
+package ciaabcdefg.oeam.mixin.entity.living;
 
 import ciaabcdefg.oeam.attribute.ModAttributes;
 import com.llamalad7.mixinextras.injector.ModifyReturnValue;

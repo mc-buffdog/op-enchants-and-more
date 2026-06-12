@@ -1,4 +1,4 @@
-package ciaabcdefg.oeam.mixin.livingentity;
+package ciaabcdefg.oeam.mixin.entity.living;
 
 import com.llamalad7.mixinextras.injector.ModifyExpressionValue;
 import net.minecraft.tags.ItemTags;

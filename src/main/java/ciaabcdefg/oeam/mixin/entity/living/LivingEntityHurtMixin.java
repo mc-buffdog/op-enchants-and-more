@@ -1,17 +1,14 @@
-package ciaabcdefg.oeam.mixin.livingentity;
+package ciaabcdefg.oeam.mixin.entity.living;
 
 import ciaabcdefg.oeam.attribute.ModAttributes;
 import ciaabcdefg.oeam.enchantment.ModEnchantments;
 import ciaabcdefg.oeam.enchantment.custom.LifestealEnchantment;
 import ciaabcdefg.oeam.util.ModDamageSourceUtil;
 import ciaabcdefg.oeam.util.ModEnchantmentUtil;
-import com.llamalad7.mixinextras.injector.ModifyExpressionValue;
 import net.minecraft.server.level.ServerLevel;
-import net.minecraft.tags.ItemTags;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.ItemStack;
-import org.objectweb.asm.Opcodes;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
