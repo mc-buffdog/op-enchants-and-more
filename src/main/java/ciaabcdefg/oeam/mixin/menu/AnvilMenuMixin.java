@@ -31,6 +31,7 @@ public class AnvilMenuMixin {
     private void test(CallbackInfo ci, @Local(name = "enchantments") ItemEnchantments.Mutable enchantments) {
         enchantmentsPrecedence(enchantments, ModEnchantments.GREATER_EFFICIENCY, Enchantments.EFFICIENCY);
         enchantmentsPrecedence(enchantments, ModEnchantments.GREATER_SHARPNESS, Enchantments.SHARPNESS);
+        enchantmentsPrecedence(enchantments, ModEnchantments.GREATER_PROTECTION, Enchantments.PROTECTION);
     }
 
     @Redirect(
@@ -44,6 +45,7 @@ public class AnvilMenuMixin {
         return
                 allowEnchantments(enchantment, other, ModEnchantments.GREATER_EFFICIENCY, Enchantments.EFFICIENCY) ||
                 allowEnchantments(enchantment, other, ModEnchantments.GREATER_SHARPNESS, Enchantments.SHARPNESS) ||
+                allowEnchantments(enchantment, other, ModEnchantments.GREATER_PROTECTION, Enchantments.PROTECTION) ||
                 Enchantment.areCompatible(enchantment, other);
     }
 

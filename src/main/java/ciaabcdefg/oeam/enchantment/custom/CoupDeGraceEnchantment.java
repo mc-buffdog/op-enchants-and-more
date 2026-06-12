@@ -14,7 +14,7 @@ import java.util.function.Consumer;
 
 public final class CoupDeGraceEnchantment {
     public static final LevelBasedValue CRIT_CHANCE = LevelBasedValue.perLevel(0.34F, 0.035F);
-    public static final LevelBasedValue CRIT_DAMAGE_MUL = LevelBasedValue.perLevel(2.0F, 1.25F);
+    public static final LevelBasedValue CRIT_DAMAGE_MUL = LevelBasedValue.perLevel(1.5F, 0.85F);
 
     public static Enchantment.Builder build(BootstrapContext<Enchantment> context) {
         var items = context.lookup(Registries.ITEM);
@@ -22,10 +22,10 @@ public final class CoupDeGraceEnchantment {
                 Enchantment.definition(
                         items.getOrThrow(ItemTags.WEAPON_ENCHANTABLE),
                         items.getOrThrow(ItemTags.SWORDS),
-                        10,
+                        4,
                         3,
-                        Enchantment.dynamicCost(1, 11),
-                        Enchantment.dynamicCost(21, 11),
+                        Enchantment.dynamicCost(5, 25),
+                        Enchantment.dynamicCost(25, 15),
                         1,
                         EquipmentSlotGroup.MAINHAND
                 )
