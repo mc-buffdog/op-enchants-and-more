@@ -1,12 +1,9 @@
 package ciaabcdefg.oeam.datagen;
 
 import ciaabcdefg.oeam.block.tag.ModBlockTags;
-import ciaabcdefg.oeam.item.tag.ModItemTags;
 import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagsProvider;
 import net.minecraft.core.HolderLookup;
-import net.minecraft.tags.ItemTags;
-import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Blocks;
 import org.jspecify.annotations.NonNull;
 
