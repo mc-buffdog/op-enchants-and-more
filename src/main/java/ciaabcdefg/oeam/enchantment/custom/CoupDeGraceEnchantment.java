@@ -1,17 +1,16 @@
 package ciaabcdefg.oeam.enchantment.custom;
 
-import ciaabcdefg.oeam.OPEnchantsAndMore;
-import ciaabcdefg.oeam.attribute.ModAttributes;
+import net.minecraft.ChatFormatting;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstrapContext;
-import net.minecraft.resources.Identifier;
+import net.minecraft.network.chat.Component;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.entity.EquipmentSlotGroup;
-import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.item.enchantment.Enchantment;
-import net.minecraft.world.item.enchantment.EnchantmentEffectComponents;
 import net.minecraft.world.item.enchantment.LevelBasedValue;
-import net.minecraft.world.item.enchantment.effects.EnchantmentAttributeEffect;
+
+import java.util.Locale;
+import java.util.function.Consumer;
 
 public final class CoupDeGraceEnchantment {
     public static final LevelBasedValue CRIT_CHANCE = LevelBasedValue.perLevel(0.34F, 0.035F);
@@ -39,5 +38,26 @@ public final class CoupDeGraceEnchantment {
 
     public static float calculateCritDamageMul(int level) {
         return Math.max(CRIT_DAMAGE_MUL.calculate(level), 1.0F);
+    }
+
+    public static void displayTooltip(Consumer<Component> builder, int level) {
+        var critChance = calculateCritChance(level);
+        var critDamageMul = calculateCritDamageMul(level);
+        var formattedCritChance = String.format(Locale.ROOT, "%+.1f%%", critChance * 100);
+        var formattedCritDamageMul = String.format(Locale.ROOT, "%+.1f", critDamageMul);
+
+        builder.accept(
+                Component.translatable(
+                        "enchantment.effect.tooltip.op-enchants-and-more.crit_chance",
+                        formattedCritChance
+                ).withStyle(ChatFormatting.BLUE)
+        );
+
+        builder.accept(
+                Component.translatable(
+                        "enchantment.effect.tooltip.op-enchants-and-more.crit_damage_mul",
+                        formattedCritDamageMul
+                ).withStyle(ChatFormatting.BLUE)
+        );
     }
 }

@@ -1,6 +1,5 @@
 package ciaabcdefg.oeam.mixin.entity.player;
 
-import ciaabcdefg.oeam.attribute.ModAttributes;
 import ciaabcdefg.oeam.enchantment.ModEnchantments;
 import ciaabcdefg.oeam.enchantment.custom.CleaveEnchantment;
 import ciaabcdefg.oeam.mixin.accessor.PlayerInvoker;
@@ -73,29 +72,30 @@ public class PlayerSweepMixin
         if (!(self.level() instanceof ServerLevel level)) return;
 
         float sweepMultiplier = 1F;
-        float range = (float)self.getAttributeValue(ModAttributes.SWEEPING_AREA);
 
         var stack = self.getWeaponItem();
         if (stack.is(ItemTags.AXES)) {
             sweepMultiplier = 7.0F;
         }
 
-        float rangeSqr = range * range;
-        float cleaveDamage = 1.0F + ((float)self.getAttributeValue(Attributes.SWEEPING_DAMAGE_RATIO) * sweepMultiplier) * totalDamage;
+        float cleaveRange = CleaveEnchantment.calculateCleaveRange(cleaveLevel);
+        float cleaveAngle = CleaveEnchantment.CLEAVE_ANGLE.calculate(cleaveLevel);
+        float cleaveBonus = CleaveEnchantment.CLEAVE_BONUS.calculate(cleaveLevel);
+        float cleaveDamage = 1.0F + (((float)self.getAttributeValue(Attributes.SWEEPING_DAMAGE_RATIO) + cleaveBonus) * sweepMultiplier) * totalDamage;
+        float cleaveRangeSqr = cleaveRange * cleaveRange;
 
         var aabb = target.getBoundingBox().inflate(
-                range,
-                range * 0.2,
-                range
+                cleaveRange,
+                cleaveRange * 0.2,
+                cleaveRange
         );
 
         var nearbyEntities = level.getEntitiesOfClass(LivingEntity.class, aabb);
         var selfPos = self.position();
         var dir = target.position().subtract(selfPos).normalize();
-        var cleaveAngle = CleaveEnchantment.CLEAVE_ANGLE.calculate(cleaveLevel);
 
         for (LivingEntity nearby : nearbyEntities) {
-            if (nearby == target || self.isAlliedTo(nearby) || self.distanceToSqr(nearby) > rangeSqr) continue;
+            if (nearby == target || self.isAlliedTo(nearby) || self.distanceToSqr(nearby) > cleaveRangeSqr) continue;
 
             double dot = dir.dot(nearby.position().subtract(selfPos).normalize());
             double angle = Math.toDegrees(Math.acos(dot));
