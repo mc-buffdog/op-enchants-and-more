@@ -29,6 +29,9 @@
   "enchantment.op-enchants-and-more.giant_slayer": "Giant Slayer",
   "enchantment.op-enchants-and-more.giant_slayer.desc": "Deals extra damage based on the target's max HP.",
 
+  "enchantment.op-enchants-and-more.desolator": "Desolator",
+  "enchantment.op-enchants-and-more.desolator.desc": "Applies a status effect that lowers the target's armor and resistance.",
+
   "attribute.name.op-enchants-and-more.elytra_speed_bonus": "Elytra Speed Bonus",
   "attribute.name.op-enchants-and-more.lifesteal": "Lifesteal",
   "attribute.name.op-enchants-and-more.crit_chance": "Critical Chance",
@@ -43,7 +46,10 @@
   "enchantment.effect.tooltip.op-enchants-and-more.cleave_angle": "%s Cleave Angle",
   "enchantment.effect.tooltip.op-enchants-and-more.damage_percent_max_hp": "%s Max HP Damage",
 
+  "effect.op-enchants-and-more.desolator": "Corrupted",
+
   "sounds.op-enchants-and-more.coup_de_grace": "Coup De Grâce hit",
   "sounds.op-enchants-and-more.cleave": "Cleave",
-  "sounds.op-enchants-and-more.splatter": "Blood splatter"
+  "sounds.op-enchants-and-more.splatter": "Blood splatter",
+  "sounds.op-enchants-and-more.desolator": "Desolator hit"
 }

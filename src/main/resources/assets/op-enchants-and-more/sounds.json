@@ -18,5 +18,11 @@
     "sounds": [
       "op-enchants-and-more:cleave"
     ]
+  },
+  "desolator": {
+    "subtitle": "sounds.op-enchants-and-more.desolator",
+    "sounds": [
+      "op-enchants-and-more:desolator"
+    ]
   }
 }

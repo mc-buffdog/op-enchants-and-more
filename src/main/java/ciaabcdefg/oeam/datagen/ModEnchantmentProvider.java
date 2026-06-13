@@ -98,6 +98,13 @@ public class ModEnchantmentProvider extends FabricDynamicRegistryProvider {
                 ModEnchantments.GIANT_SLAYER,
                 GiantSlayerEnchantment.build(context)
         );
+
+        // Desolator
+        register(
+                context,
+                ModEnchantments.DESOLATOR,
+                DesolatorEnchantment.build(context)
+        );
     }
 
     private static void register(BootstrapContext<Enchantment> registry, ResourceKey<Enchantment> key, Enchantment.Builder builder) {

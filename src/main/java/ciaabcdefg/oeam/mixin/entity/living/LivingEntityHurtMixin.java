@@ -1,6 +1,7 @@
 package ciaabcdefg.oeam.mixin.entity.living;
 
 import ciaabcdefg.oeam.attribute.ModAttributes;
+import ciaabcdefg.oeam.effect.ModEffects;
 import ciaabcdefg.oeam.enchantment.ModEnchantments;
 import ciaabcdefg.oeam.enchantment.custom.LifestealEnchantment;
 import ciaabcdefg.oeam.util.ModDamageSourceUtil;
@@ -13,6 +14,7 @@ import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
+import org.spongepowered.asm.mixin.injection.ModifyArg;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 @Mixin(LivingEntity.class)
@@ -71,6 +73,21 @@ public class LivingEntityHurtMixin {
         if (toHeal > 0) {
             attacker.heal(toHeal);
         }
+    }
+
+    @ModifyArg(
+            method = "getDamageAfterMagicAbsorb",
+            at = @At(
+                    value = "INVOKE",
+                    target = "Lnet/minecraft/world/damagesource/CombatRules;getDamageAfterMagicAbsorb(FF)F"),
+            index = 1
+    )
+    private float modifyMagicArmor(float magicArmor) {
+        var self = (LivingEntity)(Object)this;
+        if (self.hasEffect(ModEffects.DESOLATOR)) {
+            return magicArmor * 0.75F;
+        }
+        return magicArmor;
     }
 
     @Unique
