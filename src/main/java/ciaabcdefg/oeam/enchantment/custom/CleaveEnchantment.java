@@ -13,9 +13,9 @@ import java.util.Locale;
 import java.util.function.Consumer;
 
 public class CleaveEnchantment {
-    public static LevelBasedValue CLEAVE_RANGE = LevelBasedValue.perLevel(3F, 1.4F);
+    public static LevelBasedValue CLEAVE_RANGE = LevelBasedValue.perLevel(2F, 1.2F);
     public static LevelBasedValue CLEAVE_BONUS = LevelBasedValue.perLevel(0.010F, 0.03F);
-    public static LevelBasedValue CLEAVE_ANGLE = LevelBasedValue.perLevel(45F, 5F);
+    public static LevelBasedValue CLEAVE_ANGLE = LevelBasedValue.perLevel(40, 4F);
 
     public static Enchantment.Builder build(BootstrapContext<Enchantment> context) {
         var items = context.lookup(Registries.ITEM);
