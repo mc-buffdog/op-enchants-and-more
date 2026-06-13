@@ -28,6 +28,7 @@ public class ModEnchantmentTagProvider extends FabricTagsProvider<Enchantment> {
                 .add(ModEnchantments.GREATER_FORTUNE)
                 .add(ModEnchantments.SOAR)
                 .add(ModEnchantments.CLEAVE)
+                .add(ModEnchantments.SMELTING)
                 .add(ModEnchantments.GIANT_SLAYER);
     }
 }
