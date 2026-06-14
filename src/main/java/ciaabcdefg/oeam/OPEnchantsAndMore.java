@@ -1,6 +1,7 @@
 package ciaabcdefg.oeam;
 
 import ciaabcdefg.oeam.attribute.ModAttributes;
+import ciaabcdefg.oeam.component.ModDataComponents;
 import ciaabcdefg.oeam.effect.ModEffects;
 import ciaabcdefg.oeam.enchantment.ModEnchantments;
 import ciaabcdefg.oeam.particle.ModParticles;
@@ -33,6 +34,7 @@ public class OPEnchantsAndMore implements ModInitializer {
 		ModEnchantments.initialize();
 		ModAttributes.initialize();
 		ModEffects.initialize();
+		ModDataComponents.initialize();
 
 		LootTableEvents.MODIFY.register((key, tableBuilder, source, registries) -> {
 			if (!key.identifier().getPath().startsWith("blocks/")) return;
