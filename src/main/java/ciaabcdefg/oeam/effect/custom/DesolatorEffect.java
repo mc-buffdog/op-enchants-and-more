@@ -1,6 +1,7 @@
 package ciaabcdefg.oeam.effect.custom;
 
 import ciaabcdefg.oeam.OPEnchantsAndMore;
+import ciaabcdefg.oeam.enchantment.custom.DesolatorEnchantment;
 import net.minecraft.resources.Identifier;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectCategory;
@@ -14,13 +15,13 @@ public class DesolatorEffect extends MobEffect {
         addAttributeModifier(
                 Attributes.ARMOR,
                 ATTRIBUTE_MODIFIER_ID,
-                -10,
+                -DesolatorEnchantment.DESOLATOR_ARMOR_REDUCTION,
                 AttributeModifier.Operation.ADD_VALUE
         );
         addAttributeModifier(
                 Attributes.ARMOR_TOUGHNESS,
                 ATTRIBUTE_MODIFIER_ID,
-                -5,
+                -DesolatorEnchantment.DESOLATOR_ARMOR_TOUGHNESS_REDUCTION,
                 AttributeModifier.Operation.ADD_VALUE
         );
     }

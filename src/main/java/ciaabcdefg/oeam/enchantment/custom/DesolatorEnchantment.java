@@ -11,8 +11,14 @@ import net.minecraft.world.item.enchantment.EnchantmentTarget;
 import net.minecraft.world.item.enchantment.LevelBasedValue;
 
 public class DesolatorEnchantment {
-    public static final float DESOLATOR_DURATION = 6.0F;
-    public static final LevelBasedValue DESOLATOR_ARMOR_REDUCTION = LevelBasedValue.perLevel(4F, 3F);
+    public static final float DESOLATOR_DURATION = 2.0F;
+    public static final float DESOLATOR_ARMOR_REDUCTION = 12.0F;
+    public static final float DESOLATOR_ARMOR_TOUGHNESS_REDUCTION = 5.0F;
+    public static final float DESOLATOR_MAGIC_ARMOR_REDUCTION_RATIO = 0.25F;
+
+    public static final int MAX_STACKS = 30;
+    public static final float DESOLATOR_MAX_DAMAGE = 5.0F;
+    public static final LevelBasedValue DESOLATOR_DAMAGE_PER_STACK = LevelBasedValue.perLevel(DESOLATOR_MAX_DAMAGE / MAX_STACKS);
 
     public static Enchantment.Builder build(BootstrapContext<Enchantment> context) {
         var items = context.lookup(Registries.ITEM);
@@ -31,7 +37,11 @@ public class DesolatorEnchantment {
                 EnchantmentEffectComponents.POST_ATTACK,
                 EnchantmentTarget.ATTACKER,
                 EnchantmentTarget.VICTIM,
-                new DesolatorEnchantmentEffect(LevelBasedValue.perLevel(0.1F))
+                new DesolatorEnchantmentEffect()
         );
+    }
+
+    public static float calculateDesolatorDamage(int stacks) {
+        return Math.max(DESOLATOR_DAMAGE_PER_STACK.calculate(Math.min(stacks, MAX_STACKS)), 0);
     }
 }
