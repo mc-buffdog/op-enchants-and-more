@@ -30,7 +30,7 @@
   "enchantment.op-enchants-and-more.giant_slayer.desc": "Deals extra damage based on the target's max HP.",
 
   "enchantment.op-enchants-and-more.smelting": "Smelting",
-  "enchantment.op-enchants-and-more.smelting.desc": "Mining a block drops its smelted result.",
+  "enchantment.op-enchants-and-more.smelting.desc": "Mining a smeltable block drops its smelted result.",
 
   "enchantment.op-enchants-and-more.desolator": "Desolator",
   "enchantment.op-enchants-and-more.desolator.desc": "Applies a status effect that lowers the target's armor and resistance. Also grants extra damage with each kill.",

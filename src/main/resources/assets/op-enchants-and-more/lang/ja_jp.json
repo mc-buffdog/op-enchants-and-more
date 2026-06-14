@@ -29,6 +29,12 @@
   "enchantment.op-enchants-and-more.giant_slayer": "巨人狩り",
   "enchantment.op-enchants-and-more.giant_slayer.desc": "mobの最大体力の一部追加ダメージを与えます。",
 
+  "enchantment.op-enchants-and-more.smelting": "精錬",
+  "enchantment.op-enchants-and-more.smelting.desc": "採掘したブロックを精錬します。",
+
+  "enchantment.op-enchants-and-more.desolator": "荒れ果て",
+  "enchantment.op-enchants-and-more.desolator.desc": "攻撃したmobの防御力・ダメージ軽減効果を低下させます。さらに、倒すごとに追加ダメージを獲得します。",
+
   "attribute.name.op-enchants-and-more.elytra_speed_bonus": "滑空速度",
   "attribute.name.op-enchants-and-more.lifesteal": "ライフスティール",
   "attribute.name.op-enchants-and-more.crit_chance": "クリティカル確率",
@@ -42,6 +48,9 @@
   "enchantment.effect.tooltip.op-enchants-and-more.cleave_bonus": "%s 追加範囲ダメージ",
   "enchantment.effect.tooltip.op-enchants-and-more.cleave_angle": "%s 範囲攻撃°",
   "enchantment.effect.tooltip.op-enchants-and-more.damage_percent_max_hp": "%s 最大体力割合ダメージ",
+  "enchantment.effect.tooltip.op-enchants-and-more.desolator": "%s 「荒れ果て」追加ダメージ",
+
+  "effect.op-enchants-and-more.desolator": "荒れ果て",
 
   "sounds.op-enchants-and-more.coup_de_grace": "「止め刺し」の攻撃",
   "sounds.op-enchants-and-more.cleave": "「なぎ払い」の攻撃",
