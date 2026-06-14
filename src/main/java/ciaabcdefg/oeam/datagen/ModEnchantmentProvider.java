@@ -112,6 +112,13 @@ public class ModEnchantmentProvider extends FabricDynamicRegistryProvider {
                 ModEnchantments.SMELTING,
                 SmeltingEnchantment.build(context)
         );
+
+        // Smelting
+        register(
+                context,
+                ModEnchantments.HEART_OF_TARASQUE,
+                HeartOfTarasqueEnchantment.build(context)
+        );
     }
 
     private static void register(BootstrapContext<Enchantment> registry, ResourceKey<Enchantment> key, Enchantment.Builder builder) {

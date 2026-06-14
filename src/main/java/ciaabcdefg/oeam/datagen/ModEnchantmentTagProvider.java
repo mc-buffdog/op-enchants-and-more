@@ -35,6 +35,7 @@ public class ModEnchantmentTagProvider extends FabricTagsProvider<Enchantment> {
                 .add(ModEnchantments.SOAR)
                 .add(ModEnchantments.CLEAVE)
                 .add(ModEnchantments.SMELTING)
+                .add(ModEnchantments.HEART_OF_TARASQUE)
                 .add(ModEnchantments.GIANT_SLAYER);
     }
 }
