@@ -16,6 +16,7 @@
       }
     ]
   },
+  "exclusive_set": "#op-enchants-and-more:exclusive_set/efficiency",
   "max_cost": {
     "base": 40,
     "per_level_above_first": 20
