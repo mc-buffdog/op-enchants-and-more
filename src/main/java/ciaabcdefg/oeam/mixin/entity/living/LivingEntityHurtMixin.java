@@ -54,7 +54,7 @@ public class LivingEntityHurtMixin {
             return;
         }
 
-        self.invulnerableTime = 1;
+        self.invulnerableTime = 2;
     }
 
     @Inject(

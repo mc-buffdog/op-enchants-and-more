@@ -1,6 +1,8 @@
 package ciaabcdefg.oeam.enchantment.custom;
 
 import ciaabcdefg.oeam.OPEnchantsAndMore;
+import ciaabcdefg.oeam.enchantment.effect.ModEnchantmentEffects;
+import ciaabcdefg.oeam.enchantment.effect.custom.HeartOfTarasqueEnchantmentEffect;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstrapContext;
 import net.minecraft.resources.Identifier;
@@ -33,6 +35,8 @@ public class HeartOfTarasqueEnchantment {
                         Attributes.MAX_HEALTH,
                         LevelBasedValue.perLevel(1F),
                         AttributeModifier.Operation.ADD_VALUE)
+                ).withEffect(
+                        EnchantmentEffectComponents.TICK, new HeartOfTarasqueEnchantmentEffect()
                 );
     }
 }

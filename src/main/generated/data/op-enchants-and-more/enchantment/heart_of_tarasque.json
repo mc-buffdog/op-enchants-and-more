@@ -15,6 +15,13 @@
         "id": "op-enchants-and-more:heart_of_tarasque",
         "operation": "add_value"
       }
+    ],
+    "minecraft:tick": [
+      {
+        "effect": {
+          "type": "op-enchants-and-more:heart_of_tarasque_effect"
+        }
+      }
     ]
   },
   "max_cost": {
