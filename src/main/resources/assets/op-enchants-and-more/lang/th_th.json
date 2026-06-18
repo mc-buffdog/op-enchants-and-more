@@ -33,7 +33,10 @@
   "enchantment.op-enchants-and-more.smelting.desc": "ไอเทมที่ดรอปจากการขุดจะอยู่ในสภาพที่ถูกหลอมแล้ว",
 
   "enchantment.op-enchants-and-more.desolator": "กัดกร่อน",
-  "enchantment.op-enchants-and-more.desolator.desc": "ลดเกราะและค่าการป้องกันของศัตรูชั่วคราว และเพิ่มดาเมจเสริมทุกครั้งเมื่อฆ่าศัตรู",
+  "enchantment.op-enchants-and-more.desolator.desc": "ลดเกราะและค่าการป้องกันของศัตรูชั่วคราว และเพิ่มดาเมจเสริมทุกครั้งเมื่อสังหารผู้เล่น",
+
+  "enchantment.op-enchants-and-more.heart_of_tarasque": "หัวใจอสูร",
+  "enchantment.op-enchants-and-more.heart_of_tarasque.desc": "เพิ่มค่าพลังชีวิตสูงสุด",
 
   "attribute.name.op-enchants-and-more.elytra_speed_bonus": "โบนัสความเร็วปีก",
   "attribute.name.op-enchants-and-more.lifesteal": "เปอร์เซ็นต์ดูดเลือด",
@@ -51,6 +54,7 @@
   "enchantment.effect.tooltip.op-enchants-and-more.desolator": "%s ดาเมจเสริมจาก \"กัดกร่อน\"",
 
   "effect.op-enchants-and-more.desolator": "ถูกกัดกร่อน",
+  "effect.op-enchants-and-more.vitality": "ฟื้นฟูอย่างต่อเนื่อง",
 
   "sounds.op-enchants-and-more.coup_de_grace": "ตีติดการุณยฆาต",
   "sounds.op-enchants-and-more.splatter": "เสียงเลือดหยด",

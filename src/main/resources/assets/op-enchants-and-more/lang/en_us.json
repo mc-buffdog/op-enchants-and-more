@@ -33,7 +33,7 @@
   "enchantment.op-enchants-and-more.smelting.desc": "Mining a smeltable block drops its smelted result.",
 
   "enchantment.op-enchants-and-more.desolator": "Desolator",
-  "enchantment.op-enchants-and-more.desolator.desc": "Applies a status effect that lowers the target's armor and resistance. Also grants extra damage with each kill.",
+  "enchantment.op-enchants-and-more.desolator.desc": "Applies a status effect that lowers the target's armor and resistance. Also grants extra damage with each player kill.",
 
   "enchantment.op-enchants-and-more.heart_of_tarasque": "Heart of Tarasque",
   "enchantment.op-enchants-and-more.heart_of_tarasque.desc": "Increases maximum HP.",

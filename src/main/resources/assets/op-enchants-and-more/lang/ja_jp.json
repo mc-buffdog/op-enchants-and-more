@@ -33,7 +33,10 @@
   "enchantment.op-enchants-and-more.smelting.desc": "採掘したブロックを精錬します。",
 
   "enchantment.op-enchants-and-more.desolator": "荒れ果て",
-  "enchantment.op-enchants-and-more.desolator.desc": "攻撃したmobの防御力・ダメージ軽減効果を低下させます。さらに、倒すごとに追加ダメージを獲得します。",
+  "enchantment.op-enchants-and-more.desolator.desc": "攻撃したmobの防御力・ダメージ軽減効果を低下させます。さらに、プレイヤーを倒すごとに追加ダメージを獲得します。",
+
+  "enchantment.op-enchants-and-more.heart_of_tarasque": "タラスクの心臓",
+  "enchantment.op-enchants-and-more.heart_of_tarasque.desc": "最大体力を増加させます。",
 
   "attribute.name.op-enchants-and-more.elytra_speed_bonus": "滑空速度",
   "attribute.name.op-enchants-and-more.lifesteal": "ライフスティール",
@@ -51,6 +54,7 @@
   "enchantment.effect.tooltip.op-enchants-and-more.desolator": "%s 「荒れ果て」追加ダメージ",
 
   "effect.op-enchants-and-more.desolator": "荒れ果て",
+  "effect.op-enchants-and-more.vitality": "継続回復",
 
   "sounds.op-enchants-and-more.coup_de_grace": "「止め刺し」の攻撃",
   "sounds.op-enchants-and-more.cleave": "「なぎ払い」の攻撃",
