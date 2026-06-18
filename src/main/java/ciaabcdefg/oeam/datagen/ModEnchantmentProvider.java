@@ -120,6 +120,13 @@ public class ModEnchantmentProvider extends FabricDynamicRegistryProvider {
                 HeartOfTarasqueEnchantment.build(context)
         );
 
+        // Learning
+        register(
+                context,
+                ModEnchantments.LEARNING,
+                LearningEnchantment.build(context)
+        );
+
         // Greater Looting
         register(
                 context,

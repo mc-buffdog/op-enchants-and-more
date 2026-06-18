@@ -29,6 +29,8 @@ public class ModEnchantments {
             = register("smelting");
     public static final ResourceKey<Enchantment> HEART_OF_TARASQUE
             = register("heart_of_tarasque");
+    public static final ResourceKey<Enchantment> LEARNING
+            = register("learning");
 
     // Greater versions of vanilla enchantments
     public static final ResourceKey<Enchantment> GREATER_SHARPNESS
