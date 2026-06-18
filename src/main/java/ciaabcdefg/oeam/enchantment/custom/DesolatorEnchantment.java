@@ -11,7 +11,7 @@ import net.minecraft.world.item.enchantment.EnchantmentTarget;
 import net.minecraft.world.item.enchantment.LevelBasedValue;
 
 public class DesolatorEnchantment {
-    public static final float DESOLATOR_DURATION = 2.0F;
+    public static final float DESOLATOR_DURATION = 6.0F;
     public static final float DESOLATOR_ARMOR_REDUCTION = 12.0F;
     public static final float DESOLATOR_ARMOR_TOUGHNESS_REDUCTION = 5.0F;
     public static final float DESOLATOR_MAGIC_ARMOR_REDUCTION_RATIO = 0.25F;

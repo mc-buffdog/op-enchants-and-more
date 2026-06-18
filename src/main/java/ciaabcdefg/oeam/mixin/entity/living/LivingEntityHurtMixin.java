@@ -1,6 +1,5 @@
 package ciaabcdefg.oeam.mixin.entity.living;
 
-import ciaabcdefg.oeam.OPEnchantsAndMore;
 import ciaabcdefg.oeam.attribute.ModAttributes;
 import ciaabcdefg.oeam.component.ModDataComponents;
 import ciaabcdefg.oeam.component.custom.DesolatorStacksComponent;
@@ -13,6 +12,7 @@ import ciaabcdefg.oeam.util.ModEnchantmentUtil;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Unique;
@@ -66,6 +66,9 @@ public class LivingEntityHurtMixin {
             )
     )
     private void modifyDeath(ServerLevel level, DamageSource source, float damage, CallbackInfoReturnable<Boolean> cir) {
+        var self = (LivingEntity)(Object)this;
+        if (!(self instanceof Player)) return;
+
         var weapon = source.getWeaponItem();
         if (weapon == null) return;
 
