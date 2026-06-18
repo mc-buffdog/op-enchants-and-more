@@ -1,5 +1,6 @@
 package ciaabcdefg.oeam.enchantment.custom;
 
+import ciaabcdefg.oeam.enchantment.tag.ModEnchantmentTags;
 import net.minecraft.advancements.criterion.EntityPredicate;
 import net.minecraft.advancements.criterion.EntityTypePredicate;
 import net.minecraft.core.registries.Registries;
@@ -19,6 +20,7 @@ public class GreaterLootingEnchantment {
     public static Enchantment.Builder build(BootstrapContext<Enchantment> context) {
         var items = context.lookup(Registries.ITEM);
         var entityTypes = context.lookup(Registries.ENTITY_TYPE);
+        var enchantments = context.lookup(Registries.ENCHANTMENT);
         return Enchantment.enchantment(
                     Enchantment.definition(
                             items.getOrThrow(ItemTags.MELEE_WEAPON_ENCHANTABLE),
@@ -30,6 +32,7 @@ public class GreaterLootingEnchantment {
                             EquipmentSlotGroup.MAINHAND
                     )
             )
+            .exclusiveWith(enchantments.getOrThrow(ModEnchantmentTags.LOOTING_EXCLUSIVE))
             .withEffect(
                     EnchantmentEffectComponents.EQUIPMENT_DROPS,
                     EnchantmentTarget.ATTACKER,

@@ -25,6 +25,7 @@
       }
     ]
   },
+  "exclusive_set": "#op-enchants-and-more:exclusive_set/looting",
   "max_cost": {
     "base": 65,
     "per_level_above_first": 9
