@@ -1,7 +1,10 @@
 package ciaabcdefg.oeam.mixin.entity.player;
 
+import ciaabcdefg.oeam.OPEnchantsAndMore;
+import ciaabcdefg.oeam.component.ModDataComponents;
 import ciaabcdefg.oeam.enchantment.ModEnchantments;
 import ciaabcdefg.oeam.enchantment.custom.CoupDeGraceEnchantment;
+import ciaabcdefg.oeam.enchantment.custom.DesolatorEnchantment;
 import ciaabcdefg.oeam.enchantment.custom.GiantSlayerEnchantment;
 import ciaabcdefg.oeam.mixin.accessor.PlayerInvoker;
 import ciaabcdefg.oeam.particle.ModParticles;
@@ -14,11 +17,14 @@ import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.ItemStack;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
+import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.ModifyVariable;
 import org.spongepowered.asm.mixin.injection.Redirect;
+import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 @Mixin(Player.class)
 public abstract class PlayerDamageMixin {
@@ -51,6 +57,11 @@ public abstract class PlayerDamageMixin {
 
         int giantSlayerLevel = ModEnchantmentUtil.getEnchantmentLevel(itemStack, ModEnchantments.GIANT_SLAYER);
         int coupDeGraceLevel = ModEnchantmentUtil.getEnchantmentLevel(itemStack, ModEnchantments.COUP_DE_GRACE);
+        int desolatorLevel =  ModEnchantmentUtil.getEnchantmentLevel(itemStack, ModEnchantments.DESOLATOR);
+
+        if (desolatorLevel > 0) {
+            totalDamage = desolatorPipe(self, target, serverLevel, totalDamage, itemStack);
+        }
 
         if (giantSlayerLevel > 0) {
             totalDamage = giantSlayerPipe(self, target, serverLevel, totalDamage, giantSlayerLevel);
@@ -89,6 +100,17 @@ public abstract class PlayerDamageMixin {
     private static float giantSlayerPipe(Player player, LivingEntity target, ServerLevel level, float damage, int giantSlayerLevel) {
         float targetMaxHealth = target.getMaxHealth();
         return damage + targetMaxHealth * GiantSlayerEnchantment.DAMAGE_PERCENT_MAX_HP.calculate(giantSlayerLevel);
+    }
+
+    @Unique
+    private static float desolatorPipe(Player player, LivingEntity target, ServerLevel level, float damage, ItemStack weapon) {
+        player.level().playSound(null, player.blockPosition(), ModSounds.DESOLATOR, SoundSource.PLAYERS, 0.8f, 1f);
+
+        var stacks = weapon.get(ModDataComponents.DESOLATOR_STACKS_COMPONENT);
+        if (stacks != null) {
+            return damage + DesolatorEnchantment.calculateDesolatorDamage(stacks.stacks());
+        }
+        return damage;
     }
 
     @Redirect(

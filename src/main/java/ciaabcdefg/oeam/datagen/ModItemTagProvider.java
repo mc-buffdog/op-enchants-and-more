@@ -20,7 +20,6 @@ public class ModItemTagProvider extends FabricTagsProvider.ItemTagsProvider {
         valueLookupBuilder(ModItemTags.CLEAVE_WEAPON_ENCHANTABLE)
                 .addOptionalTag(ItemTags.SWORDS)
                 .addOptionalTag(ItemTags.AXES);
-
         valueLookupBuilder(ModItemTags.FLYING_ENCHANTABLE)
                 .add(Items.ELYTRA);
     }

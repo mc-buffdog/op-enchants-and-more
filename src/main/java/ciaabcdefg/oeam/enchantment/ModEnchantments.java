@@ -23,8 +23,12 @@ public class ModEnchantments {
             = register("soar");
     public static final ResourceKey<Enchantment> GIANT_SLAYER
             = register("giant_slayer");
+    public static final ResourceKey<Enchantment> DESOLATOR
+            = register("desolator");
     public static final ResourceKey<Enchantment> SMELTING
             = register("smelting");
+    public static final ResourceKey<Enchantment> HEART_OF_TARASQUE
+            = register("heart_of_tarasque");
 
     // Greater versions of vanilla enchantments
     public static final ResourceKey<Enchantment> GREATER_SHARPNESS

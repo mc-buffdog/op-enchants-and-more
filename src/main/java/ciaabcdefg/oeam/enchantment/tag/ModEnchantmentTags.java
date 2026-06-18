@@ -7,6 +7,8 @@ import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.enchantment.Enchantment;
 
 public class ModEnchantmentTags {
+    public static TagKey<Enchantment> EFFICIENCY_EXCLUSIVE = create("exclusive_set/efficiency");
+
     public static void initialize() {
         OPEnchantsAndMore.LOGGER.info("Initialized ModEnchantmentTags");
     }

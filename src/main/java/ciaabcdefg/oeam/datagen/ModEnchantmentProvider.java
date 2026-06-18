@@ -99,11 +99,25 @@ public class ModEnchantmentProvider extends FabricDynamicRegistryProvider {
                 GiantSlayerEnchantment.build(context)
         );
 
+        // Desolator
+        register(
+                context,
+                ModEnchantments.DESOLATOR,
+                DesolatorEnchantment.build(context)
+        );
+
         // Smelting
         register(
                 context,
                 ModEnchantments.SMELTING,
                 SmeltingEnchantment.build(context)
+        );
+
+        // Smelting
+        register(
+                context,
+                ModEnchantments.HEART_OF_TARASQUE,
+                HeartOfTarasqueEnchantment.build(context)
         );
     }
 

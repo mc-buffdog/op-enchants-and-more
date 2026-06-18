@@ -32,7 +32,7 @@ public class GreaterProtectionEnchantment {
                 .exclusiveWith(enchantments.getOrThrow(EnchantmentTags.ARMOR_EXCLUSIVE))
                 .withEffect(
                         EnchantmentEffectComponents.DAMAGE_PROTECTION,
-                        new AddValue(LevelBasedValue.perLevel(2.25F)),
+                        new AddValue(LevelBasedValue.perLevel(2.5F)),
                         DamageSourceCondition.hasDamageSource(DamageSourcePredicate.Builder.damageType().tag(TagPredicate.isNot(DamageTypeTags.BYPASSES_INVULNERABILITY)))
                 );
     }

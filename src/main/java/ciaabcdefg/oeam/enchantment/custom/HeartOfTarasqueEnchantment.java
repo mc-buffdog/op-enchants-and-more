@@ -1,7 +1,7 @@
 package ciaabcdefg.oeam.enchantment.custom;
 
 import ciaabcdefg.oeam.OPEnchantsAndMore;
-import ciaabcdefg.oeam.enchantment.tag.ModEnchantmentTags;
+import ciaabcdefg.oeam.enchantment.effect.custom.HeartOfTarasqueEnchantmentEffect;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstrapContext;
 import net.minecraft.resources.Identifier;
@@ -14,30 +14,28 @@ import net.minecraft.world.item.enchantment.EnchantmentEffectComponents;
 import net.minecraft.world.item.enchantment.LevelBasedValue;
 import net.minecraft.world.item.enchantment.effects.EnchantmentAttributeEffect;
 
-public class GreaterEfficiencyEnchantment {
+public class HeartOfTarasqueEnchantment {
     public static Enchantment.Builder build(BootstrapContext<Enchantment> context) {
         var items = context.lookup(Registries.ITEM);
-        var enchantments = context.lookup(Registries.ENCHANTMENT);
         return Enchantment.enchantment(
                         Enchantment.definition(
-                                items.getOrThrow(ItemTags.MINING_ENCHANTABLE),
-                                4,
-                                5,
-                                Enchantment.dynamicCost(5, 20),
-                                Enchantment.dynamicCost(40, 20),
+                                items.getOrThrow(ItemTags.ARMOR_ENCHANTABLE),
+                                items.getOrThrow(ItemTags.CHEST_ARMOR_ENCHANTABLE),
                                 1,
-                                EquipmentSlotGroup.MAINHAND
+                                5,
+                                Enchantment.dynamicCost(2, 12),
+                                Enchantment.dynamicCost(21, 12),
+                                1,
+                                EquipmentSlotGroup.ARMOR
                         )
                 )
-                .exclusiveWith(enchantments.getOrThrow(ModEnchantmentTags.EFFICIENCY_EXCLUSIVE))
-                .withEffect(
-                        EnchantmentEffectComponents.ATTRIBUTES,
-                        new EnchantmentAttributeEffect(
-                                Identifier.fromNamespaceAndPath(OPEnchantsAndMore.MOD_ID, "greater_efficiency"),
-                                Attributes.MINING_EFFICIENCY,
-                                new LevelBasedValue.LevelsSquared(28.0F),
-                                AttributeModifier.Operation.ADD_VALUE
-                        )
+                .withEffect(EnchantmentEffectComponents.ATTRIBUTES, new EnchantmentAttributeEffect(
+                        Identifier.fromNamespaceAndPath(OPEnchantsAndMore.MOD_ID, "heart_of_tarasque"),
+                        Attributes.MAX_HEALTH,
+                        LevelBasedValue.perLevel(1F),
+                        AttributeModifier.Operation.ADD_VALUE)
+                ).withEffect(
+                        EnchantmentEffectComponents.TICK, new HeartOfTarasqueEnchantmentEffect()
                 );
     }
 }
