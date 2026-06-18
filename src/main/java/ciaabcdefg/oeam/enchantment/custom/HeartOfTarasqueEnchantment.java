@@ -1,7 +1,6 @@
 package ciaabcdefg.oeam.enchantment.custom;
 
 import ciaabcdefg.oeam.OPEnchantsAndMore;
-import ciaabcdefg.oeam.enchantment.effect.ModEnchantmentEffects;
 import ciaabcdefg.oeam.enchantment.effect.custom.HeartOfTarasqueEnchantmentEffect;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstrapContext;
