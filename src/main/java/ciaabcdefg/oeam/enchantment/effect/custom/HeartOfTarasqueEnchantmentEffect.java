@@ -19,7 +19,13 @@ public class HeartOfTarasqueEnchantmentEffect implements EnchantmentEntityEffect
     public static final MapCodec<HeartOfTarasqueEnchantmentEffect> CODEC = MapCodec.unit(new HeartOfTarasqueEnchantmentEffect());
 
     @Override
-    public void apply(@NonNull ServerLevel serverLevel, int enchantmentLevel, EnchantedItemInUse item, Entity entity, Vec3 position) {
+    public void apply(
+        @NonNull ServerLevel serverLevel,
+        int enchantmentLevel,
+        @NonNull EnchantedItemInUse item,
+        @NonNull Entity entity,
+        @NonNull Vec3 position
+    ) {
         if (entity instanceof LivingEntity target) {
             if (allArmorSlotsHaveEnchantment(target)) {
                 var effect = target.getEffect(ModEffects.VITALITY);

@@ -8,7 +8,7 @@ import net.minecraft.world.effect.MobEffectCategory;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.enchantment.LevelBasedValue;
+import org.jspecify.annotations.NonNull;
 
 public class VitalityEffect extends MobEffect {
     public VitalityEffect() {
@@ -22,7 +22,7 @@ public class VitalityEffect extends MobEffect {
     }
 
     @Override
-    public boolean applyEffectTick(final ServerLevel level, final LivingEntity mob, final int amplification) {
+    public boolean applyEffectTick(final @NonNull ServerLevel level, final LivingEntity mob, final int amplification) {
         if (mob.getHealth() < mob.getMaxHealth()) {
             var healing = 0.2F * getAverageEnchantmentLevel(mob);
             mob.heal(healing);
