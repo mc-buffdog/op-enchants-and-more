@@ -26,6 +26,12 @@
   "enchantment.op-enchants-and-more.greater_looting": "โคตรฉกชิง",
   "enchantment.op-enchants-and-more.greater_looting.desc": "เพิ่มไอเทมที่ดรอปจากเป้าหมายอย่างมหาศาล",
 
+  "enchantment.op-enchants-and-more.greater_mending": "โคตรซ่อมแซม",
+  "enchantment.op-enchants-and-more.greater_mending.desc": "ฟื้นฟูความทนทานของไอเทมอย่างมหาศาล",
+
+  "enchantment.op-enchants-and-more.greater_unbreaking": "โคตรคงทน",
+  "enchantment.op-enchants-and-more.greater_unbreaking.desc": "เพิ่มความคงทนให้กับไอเทมอย่างมหาศาล",
+
   "enchantment.op-enchants-and-more.soar": "ล่องนภา",
   "enchantment.op-enchants-and-more.soar.desc": "เพิ่มความเร็วการร่อนและความเร่งจากพลุ",
 

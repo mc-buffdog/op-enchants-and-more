@@ -133,6 +133,13 @@ public class ModEnchantmentProvider extends FabricDynamicRegistryProvider {
                 ModEnchantments.GREATER_MENDING,
                 GreaterMendingEnchantment.build(context)
         );
+
+        // Greater Unbreaking
+        register(
+                context,
+                ModEnchantments.GREATER_UNBREAKING,
+                GreaterUnbreakingEnchantment.build(context)
+        );
     }
 
     private static void register(BootstrapContext<Enchantment> registry, ResourceKey<Enchantment> key, Enchantment.Builder builder) {

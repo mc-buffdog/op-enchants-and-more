@@ -43,6 +43,8 @@ public class ModEnchantments {
             = register("greater_looting");
     public static final ResourceKey<Enchantment> GREATER_MENDING
             = register("greater_mending");
+    public static final ResourceKey<Enchantment> GREATER_UNBREAKING
+            = register("greater_unbreaking");
 
     // Methods
     private static ResourceKey<Enchantment> register(String id) {
