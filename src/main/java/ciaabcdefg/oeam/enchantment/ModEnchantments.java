@@ -41,6 +41,8 @@ public class ModEnchantments {
             = register("greater_fortune");
     public static final ResourceKey<Enchantment> GREATER_LOOTING
             = register("greater_looting");
+    public static final ResourceKey<Enchantment> GREATER_MENDING
+            = register("greater_mending");
 
     // Methods
     private static ResourceKey<Enchantment> register(String id) {
