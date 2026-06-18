@@ -113,11 +113,18 @@ public class ModEnchantmentProvider extends FabricDynamicRegistryProvider {
                 SmeltingEnchantment.build(context)
         );
 
-        // Smelting
+        // Heart of Tarasque
         register(
                 context,
                 ModEnchantments.HEART_OF_TARASQUE,
                 HeartOfTarasqueEnchantment.build(context)
+        );
+
+        // Greater Looting
+        register(
+                context,
+                ModEnchantments.GREATER_LOOTING,
+                GreaterLootingEnchantment.build(context)
         );
     }
 
