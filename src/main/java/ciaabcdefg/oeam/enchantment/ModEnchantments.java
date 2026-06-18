@@ -29,6 +29,8 @@ public class ModEnchantments {
             = register("smelting");
     public static final ResourceKey<Enchantment> HEART_OF_TARASQUE
             = register("heart_of_tarasque");
+    public static final ResourceKey<Enchantment> LEARNING
+            = register("learning");
 
     // Greater versions of vanilla enchantments
     public static final ResourceKey<Enchantment> GREATER_SHARPNESS
@@ -39,6 +41,12 @@ public class ModEnchantments {
             = register("greater_protection");
     public static final ResourceKey<Enchantment> GREATER_FORTUNE
             = register("greater_fortune");
+    public static final ResourceKey<Enchantment> GREATER_LOOTING
+            = register("greater_looting");
+    public static final ResourceKey<Enchantment> GREATER_MENDING
+            = register("greater_mending");
+    public static final ResourceKey<Enchantment> GREATER_UNBREAKING
+            = register("greater_unbreaking");
 
     // Methods
     private static ResourceKey<Enchantment> register(String id) {

@@ -33,6 +33,9 @@ public class AnvilMenuMixin {
         enchantmentsPrecedence(enchantments, ModEnchantments.GREATER_SHARPNESS, Enchantments.SHARPNESS);
         enchantmentsPrecedence(enchantments, ModEnchantments.GREATER_PROTECTION, Enchantments.PROTECTION);
         enchantmentsPrecedence(enchantments, ModEnchantments.GREATER_FORTUNE, Enchantments.FORTUNE);
+        enchantmentsPrecedence(enchantments, ModEnchantments.GREATER_LOOTING, Enchantments.LOOTING);
+        enchantmentsPrecedence(enchantments, ModEnchantments.GREATER_MENDING, Enchantments.MENDING);
+        enchantmentsPrecedence(enchantments, ModEnchantments.GREATER_UNBREAKING, Enchantments.UNBREAKING);
     }
 
     @Redirect(
@@ -48,6 +51,9 @@ public class AnvilMenuMixin {
                 allowEnchantments(enchantment, other, ModEnchantments.GREATER_SHARPNESS, Enchantments.SHARPNESS) ||
                 allowEnchantments(enchantment, other, ModEnchantments.GREATER_PROTECTION, Enchantments.PROTECTION) ||
                 allowEnchantments(enchantment, other, ModEnchantments.GREATER_FORTUNE, Enchantments.FORTUNE) ||
+                allowEnchantments(enchantment, other, ModEnchantments.GREATER_LOOTING, Enchantments.LOOTING) ||
+                allowEnchantments(enchantment, other, ModEnchantments.GREATER_MENDING, Enchantments.MENDING) ||
+                allowEnchantments(enchantment, other, ModEnchantments.GREATER_UNBREAKING, Enchantments.UNBREAKING) ||
                 Enchantment.areCompatible(enchantment, other);
     }
 

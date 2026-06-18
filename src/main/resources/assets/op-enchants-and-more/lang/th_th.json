@@ -23,6 +23,15 @@
   "enchantment.op-enchants-and-more.greater_fortune": "โคตรโชคลาภ",
   "enchantment.op-enchants-and-more.greater_fortune.desc": "เพิ่มผลผลิตการขุดอย่างมหาศาล",
 
+  "enchantment.op-enchants-and-more.greater_looting": "โคตรฉกชิง",
+  "enchantment.op-enchants-and-more.greater_looting.desc": "เพิ่มไอเทมที่ดรอปจากเป้าหมายอย่างมหาศาล",
+
+  "enchantment.op-enchants-and-more.greater_mending": "โคตรซ่อมแซม",
+  "enchantment.op-enchants-and-more.greater_mending.desc": "ฟื้นฟูความทนทานของไอเทมอย่างมหาศาล",
+
+  "enchantment.op-enchants-and-more.greater_unbreaking": "โคตรคงทน",
+  "enchantment.op-enchants-and-more.greater_unbreaking.desc": "เพิ่มความคงทนให้กับไอเทมอย่างมหาศาล",
+
   "enchantment.op-enchants-and-more.soar": "ล่องนภา",
   "enchantment.op-enchants-and-more.soar.desc": "เพิ่มความเร็วการร่อนและความเร่งจากพลุ",
 
@@ -37,6 +46,9 @@
 
   "enchantment.op-enchants-and-more.heart_of_tarasque": "หัวใจอสูร",
   "enchantment.op-enchants-and-more.heart_of_tarasque.desc": "เพิ่มค่าพลังชีวิตสูงสุด",
+
+  "enchantment.op-enchants-and-more.learning": "เรียนรู้",
+  "enchantment.op-enchants-and-more.learning.desc": "เพิ่มค่าประสบการณ์ที่ดรอปจากศัตรู",
 
   "attribute.name.op-enchants-and-more.elytra_speed_bonus": "โบนัสความเร็วปีก",
   "attribute.name.op-enchants-and-more.lifesteal": "เปอร์เซ็นต์ดูดเลือด",

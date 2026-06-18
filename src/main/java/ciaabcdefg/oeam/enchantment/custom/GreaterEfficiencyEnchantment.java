@@ -35,7 +35,7 @@ public class GreaterEfficiencyEnchantment {
                         new EnchantmentAttributeEffect(
                                 Identifier.fromNamespaceAndPath(OPEnchantsAndMore.MOD_ID, "greater_efficiency"),
                                 Attributes.MINING_EFFICIENCY,
-                                new LevelBasedValue.LevelsSquared(28.0F),
+                                new LevelBasedValue.LevelsSquared(80.0F),
                                 AttributeModifier.Operation.ADD_VALUE
                         )
                 );

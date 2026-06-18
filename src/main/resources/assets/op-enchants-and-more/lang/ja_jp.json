@@ -23,6 +23,15 @@
   "enchantment.op-enchants-and-more.greater_fortune": "幸運・改",
   "enchantment.op-enchants-and-more.greater_fortune.desc": "「幸運」の強化版。",
 
+  "enchantment.op-enchants-and-more.greater_looting": "ドロップ増加・改",
+  "enchantment.op-enchants-and-more.greater_looting.desc": "「ドロップ増加」の強化版。",
+
+  "enchantment.op-enchants-and-more.greater_mending": "修繕・改",
+  "enchantment.op-enchants-and-more.greater_mending.desc": "「修繕」の強化版。",
+
+  "enchantment.op-enchants-and-more.greater_unbreaking": "耐久力・改",
+  "enchantment.op-enchants-and-more.greater_unbreaking.desc": "「耐久力」の強化版。",
+
   "enchantment.op-enchants-and-more.soar": "滑空",
   "enchantment.op-enchants-and-more.soar.desc": "エリトラの滑空速度・ロケット花火による加速度を増加させます。",
 
@@ -37,6 +46,9 @@
 
   "enchantment.op-enchants-and-more.heart_of_tarasque": "タラスクの心臓",
   "enchantment.op-enchants-and-more.heart_of_tarasque.desc": "最大体力を増加させます。",
+
+  "enchantment.op-enchants-and-more.learning": "学習",
+  "enchantment.op-enchants-and-more.learning.desc": "mobからドロップする経験値を増加させます。",
 
   "attribute.name.op-enchants-and-more.elytra_speed_bonus": "滑空速度",
   "attribute.name.op-enchants-and-more.lifesteal": "ライフスティール",

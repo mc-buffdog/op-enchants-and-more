@@ -23,6 +23,15 @@
   "enchantment.op-enchants-and-more.greater_fortune": "Greater Fortune",
   "enchantment.op-enchants-and-more.greater_fortune.desc": "Superior version of Fortune.",
 
+  "enchantment.op-enchants-and-more.greater_looting": "Greater Looting",
+  "enchantment.op-enchants-and-more.greater_looting.desc": "Superior version of Looting.",
+
+  "enchantment.op-enchants-and-more.greater_mending": "Greater Mending",
+  "enchantment.op-enchants-and-more.greater_mending.desc": "Superior version of Mending.",
+
+  "enchantment.op-enchants-and-more.greater_unbreaking": "Greater Unbreaking",
+  "enchantment.op-enchants-and-more.greater_unbreaking.desc": "Superior version of Unbreaking.",
+
   "enchantment.op-enchants-and-more.soar": "Soar",
   "enchantment.op-enchants-and-more.soar.desc": "Increases elytra glide and rocket boost speeds.",
 
@@ -37,6 +46,9 @@
 
   "enchantment.op-enchants-and-more.heart_of_tarasque": "Heart of Tarasque",
   "enchantment.op-enchants-and-more.heart_of_tarasque.desc": "Increases maximum HP.",
+
+  "enchantment.op-enchants-and-more.learning": "Learning",
+  "enchantment.op-enchants-and-more.learning.desc": "Increases XP drop from mobs.",
 
   "attribute.name.op-enchants-and-more.elytra_speed_bonus": "Elytra Speed Bonus",
   "attribute.name.op-enchants-and-more.lifesteal": "Lifesteal",
