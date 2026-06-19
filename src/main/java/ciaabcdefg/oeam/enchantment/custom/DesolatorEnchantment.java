@@ -26,9 +26,9 @@ public class DesolatorEnchantment {
                 Enchantment.definition(
                         items.getOrThrow(ItemTags.WEAPON_ENCHANTABLE),
                         items.getOrThrow(ItemTags.SWORDS),
-                        3,
+                        2,
                         1,
-                        Enchantment.dynamicCost(10, 15),
+                        Enchantment.dynamicCost(25, 15),
                         Enchantment.dynamicCost(25, 15),
                         1,
                         EquipmentSlotGroup.MAINHAND

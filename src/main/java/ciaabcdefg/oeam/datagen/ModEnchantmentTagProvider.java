@@ -50,6 +50,8 @@ public class ModEnchantmentTagProvider extends FabricTagsProvider<Enchantment> {
                 .add(ModEnchantments.CLEAVE)
                 .add(ModEnchantments.SMELTING)
                 .add(ModEnchantments.HEART_OF_TARASQUE)
+                .add(ModEnchantments.DESOLATOR)
+                .add(ModEnchantments.LEARNING)
                 .add(ModEnchantments.GIANT_SLAYER);
 
         builder(EnchantmentTags.TRADEABLE)

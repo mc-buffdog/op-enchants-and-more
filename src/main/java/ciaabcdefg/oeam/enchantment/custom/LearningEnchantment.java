@@ -15,7 +15,7 @@ public final class LearningEnchantment {
         return Enchantment.enchantment(
                 Enchantment.definition(
                         items.getOrThrow(ItemTags.WEAPON_ENCHANTABLE),
-                        2,
+                        3,
                         3,
                         Enchantment.dynamicCost(15, 9),
                         Enchantment.dynamicCost(65, 9),

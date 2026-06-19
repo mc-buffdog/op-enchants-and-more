@@ -21,7 +21,7 @@ public class HeartOfTarasqueEnchantment {
                         Enchantment.definition(
                                 items.getOrThrow(ItemTags.ARMOR_ENCHANTABLE),
                                 items.getOrThrow(ItemTags.CHEST_ARMOR_ENCHANTABLE),
-                                1,
+                                3,
                                 5,
                                 Enchantment.dynamicCost(2, 12),
                                 Enchantment.dynamicCost(21, 12),
