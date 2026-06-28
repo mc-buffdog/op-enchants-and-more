@@ -33,10 +33,9 @@
     "base": 2,
     "per_level_above_first": 12
   },
-  "primary_items": "#minecraft:enchantable/chest_armor",
   "slots": [
     "armor"
   ],
-  "supported_items": "#minecraft:enchantable/armor",
+  "supported_items": "#op-enchants-and-more:enchantable/heart_of_tarasque",
   "weight": 3
 }

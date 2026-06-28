@@ -1,0 +1,12 @@
+{
+  "values": [
+    {
+      "id": "#op-enchants-and-more:enchantable/flying",
+      "required": false
+    },
+    {
+      "id": "#minecraft:enchantable/armor",
+      "required": false
+    }
+  ]
+}

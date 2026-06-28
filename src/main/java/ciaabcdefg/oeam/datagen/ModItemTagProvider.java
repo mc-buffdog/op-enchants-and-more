@@ -22,5 +22,8 @@ public class ModItemTagProvider extends FabricTagsProvider.ItemTagsProvider {
                 .addOptionalTag(ItemTags.AXES);
         valueLookupBuilder(ModItemTags.FLYING_ENCHANTABLE)
                 .add(Items.ELYTRA);
+        valueLookupBuilder(ModItemTags.HEART_OF_TARASQUE_ENCHANTABLE)
+                .addOptionalTag(ModItemTags.FLYING_ENCHANTABLE)
+                .addOptionalTag(ItemTags.ARMOR_ENCHANTABLE);
     }
 }

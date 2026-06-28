@@ -21,8 +21,8 @@ public class GreaterUnbreakingEnchantment {
                                 items.getOrThrow(ItemTags.DURABILITY_ENCHANTABLE),
                                 3,
                                 3,
+                                Enchantment.dynamicCost(15, 15),
                                 Enchantment.dynamicCost(25, 15),
-                                Enchantment.dynamicCost(35, 15),
                                 2,
                                 EquipmentSlotGroup.ANY
                         )

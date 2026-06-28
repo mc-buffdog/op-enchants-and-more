@@ -2,10 +2,10 @@ package ciaabcdefg.oeam.enchantment.custom;
 
 import ciaabcdefg.oeam.OPEnchantsAndMore;
 import ciaabcdefg.oeam.enchantment.effect.custom.HeartOfTarasqueEnchantmentEffect;
+import ciaabcdefg.oeam.item.tag.ModItemTags;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstrapContext;
 import net.minecraft.resources.Identifier;
-import net.minecraft.tags.ItemTags;
 import net.minecraft.world.entity.EquipmentSlotGroup;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
@@ -19,8 +19,7 @@ public class HeartOfTarasqueEnchantment {
         var items = context.lookup(Registries.ITEM);
         return Enchantment.enchantment(
                         Enchantment.definition(
-                                items.getOrThrow(ItemTags.ARMOR_ENCHANTABLE),
-                                items.getOrThrow(ItemTags.CHEST_ARMOR_ENCHANTABLE),
+                                items.getOrThrow(ModItemTags.HEART_OF_TARASQUE_ENCHANTABLE),
                                 3,
                                 5,
                                 Enchantment.dynamicCost(2, 12),
